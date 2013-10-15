@@ -125,13 +125,6 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-function login_form_username()
-{
-    global $user_login;
-    return $user_login = 'agnos';
-}
-add_action( 'init', 'login_form_username' );
-
 // Redirect admins to the dashboard and other users elsewhere
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
 function my_login_redirect( $redirect_to, $request, $user ) {
