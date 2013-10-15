@@ -7,35 +7,34 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="form-entrar">
-				<?php
-				$args = array(
-						'echo' => true,
-						'redirect' => site_url( $_SERVER['REQUEST_URI'] ), 
-						'form_id' => 'loginform',
-						'label_username' => NULL,
-						'label_password' => __( 'Password' ),
-						'label_remember' => __( 'Remember Me' ),
-						'label_log_in' => __( 'Log In' ),
-						'id_username' => NULL,
-						'id_password' => 'user_pass',
-						'id_remember' => 'rememberme',
-						'id_submit' => 'wp-submit',
-						'remember' => true,
-						'value_username' => NULL,
-						'value_remember' => false ); 
-				wp_login_form( $args );
-				?> 
+
+<form name="loginform" id="loginform" action="<?php echo get_option('home'); ?>/wp-login.php" method="post">
+	<input type="hidden" name="log" id="user_login" value="brasa" />
+	
+	<label>
+	<h3>password</h3>
+		
+	<div class="pass">
+		<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" tabindex="20" />
+	</div><!-- .pass -->
+	
+	</label>
+		<div class="submit">
+		<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Entrar" tabindex="100" />
+		<input type="hidden" name="redirect_to" value="<?php echo get_option('home'); ?>/" />
+		</div>
+</form>
 			</div><!-- .form-entrar -->
 
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div><!-- .content-area -->
 
 <?php get_footer(); ?>

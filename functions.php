@@ -124,3 +124,21 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function login_form_username()
+{
+    global $user_login;
+    return $user_login = 'brasa';
+}
+add_action( 'init', 'login_form_username' );
+
+
+/**
+ * Hide wrong login names
+ * 
+ * @return string
+ */
+function no_login_error() {
+    return __('');
+}
+//add_filter( 'login_errors', 'no_login_error' );

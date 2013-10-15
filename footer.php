@@ -12,10 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php do_action( 'aqua_theme_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'aqua-theme' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'aqua-theme' ), 'Aqua Theme', '<a href="http://www.brasa.art.br" rel="designer">Brasa Team</a>' ); ?>
+			<p>R Professor Cesare Lombroso 117 | Bom Retiro | São Paulo | SP | 55(11) 2538-2866 | 2538-8067</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
