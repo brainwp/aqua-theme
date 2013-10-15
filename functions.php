@@ -84,6 +84,7 @@ add_action( 'widgets_init', 'aqua_theme_widgets_init' );
  */
 function aqua_theme_scripts() {
 	wp_enqueue_style( 'aqua-theme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'tewenty-eleven-style', get_stylesheet_directory_uri() . '/twentyeleven-style.css' );
 
 	wp_enqueue_script( 'aqua-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
