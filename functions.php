@@ -128,10 +128,23 @@ require get_template_directory() . '/inc/jetpack.php';
 function login_form_username()
 {
     global $user_login;
-    return $user_login = 'brasa';
+    return $user_login = 'agnos';
 }
 add_action( 'init', 'login_form_username' );
 
+// Redirect admins to the dashboard and other users elsewhere
+add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+function my_login_redirect( $redirect_to, $request, $user ) {
+    // Is there a user?
+    if ( is_array( $user->roles ) ) {
+        // Is it an administrator?
+        if ( in_array( 'administrator', $user->roles ) )
+            return home_url( '/wp-admin/' );
+        else
+            return home_url();
+            // return get_permalink( 83 );
+    }
+}
 
 /**
  * Hide wrong login names

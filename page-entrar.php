@@ -15,7 +15,7 @@ get_header(); ?>
 			<div class="form-entrar">
 
 <form name="loginform" id="loginform" action="<?php echo get_option('home'); ?>/wp-login.php" method="post">
-	<input type="hidden" name="log" id="user_login" value="brasa" />
+	<input type="hidden" name="log" id="user_login" value="agnos" />
 	
 	<label>
 	<h3>password</h3>
