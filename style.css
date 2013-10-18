@@ -393,10 +393,10 @@ a:active {
 	clear: both;
 }
 
-/* =Cabecalho
+/* =Cabecalho Header
 ----------------------------------------------- */
 .logo {
-   background: url(images/logo.png);
+   background: url(images/logo-aqua.png);
    margin: 0 auto;
    width: 318px;
    height: 148px;
@@ -413,10 +413,56 @@ a:active {
 ----------------------------------------------- */
 
 .menu {
-   background: url(images/menu.png);
-   margin: 0 auto;
-   width: 822px;
-   height: 409px;
+   background: url(images/bg-menu.png) no-repeat;
+   margin: 0 auto 50px auto;
+   width: 571px;
+   height: 270px;
+}
+
+.item-menu {
+	float: left;
+	width: 115px;
+	height: 270px;
+	margin: 0 10px;
+	position: relative;
+	text-align: center;
+}
+
+.item-menu span {
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.8em;
+}
+
+.item-menu:hover span {
+	color: #333;
+}
+
+.a-item-menu {
+}
+
+.i-quem-somos span {
+	left: 16px;
+	width: 100%;
+}
+
+.i-quem-somos:hover {
+	background: url("images/bg-menu-hover.png") no-repeat scroll -10px 0px transparent;
+}
+
+.i-blog:hover {
+	background: url("images/bg-menu-hover.png") no-repeat scroll -145px 0px transparent;
+}
+
+.i-colecao:hover {
+	background: url("images/bg-menu-hover.png") no-repeat scroll -280px 0px transparent;
+}
+
+.i-contato:hover {
+	background: url("images/bg-menu-hover.png") no-repeat scroll -415px 0px transparent;
 }
 
 /* =Form Login

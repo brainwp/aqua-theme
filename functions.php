@@ -125,6 +125,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Custom Post Type Colecoes
+ */
+require get_template_directory() . '/inc/custom-colecao.php';
+
 // Redirect admins to the dashboard and other users elsewhere
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
 function my_login_redirect( $redirect_to, $request, $user ) {
@@ -148,3 +153,43 @@ function no_login_error() {
     return __('');
 }
 //add_filter( 'login_errors', 'no_login_error' );
+
+//add_action('init','to_login');
+function to_login() {
+    $isLoginPage = strpos($_SERVER['REQUEST_URI'], "wp-login.php") !== false;   
+    if(!is_user_logged_in() && !is_admin() &&  !$isLoginPage) {
+        header( 'Location:http://beta.brasa.art.br/aqua/entrar' ) ;
+        die();
+    }
+}
+
+function list_posts_by_taxonomy( $post_type, $taxonomy, $get_terms_args = array(), $wp_query_args = array() ){
+    $tax_terms = get_terms( $taxonomy, $get_terms_args );
+    if( $tax_terms ){
+        foreach( $tax_terms  as $tax_term ){
+            $query_args = array(
+                'post_type' => $post_type,
+                "$taxonomy" => $tax_term->slug,
+                'post_status' => 'publish',
+                'posts_per_page' => -1,
+                'ignore_sticky_posts' => true
+            );
+            $query_args = wp_parse_args( $wp_query_args, $query_args );
+
+            $my_query = new WP_Query( $query_args );
+            if( $my_query->have_posts() ) { ?>
+                <h3 id="<?php echo $tax_term->slug; ?>" class="tax_term-heading"><?php echo $tax_term->name; ?></h3>
+                <ul>
+                <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                    <li>
+                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?>
+                    </a>
+                    </li>
+                <?php endwhile; ?>
+                </ul>
+                <?php
+            }
+            wp_reset_query();
+        }
+    }
+}

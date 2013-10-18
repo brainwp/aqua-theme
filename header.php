@@ -27,7 +27,11 @@
 			<a class="a-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
 		</div><!-- .logo -->
 
-		<div class="menu"></div><!-- .menu -->
+    <div class="menu">
+	<?php if (!is_user_logged_in() ) { ?>
+		<?php get_template_part( 'menu' ); ?>
+    <?php } ?>
+	</div><!-- .menu -->
 
 	</header><!-- #masthead -->
 
