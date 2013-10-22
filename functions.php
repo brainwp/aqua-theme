@@ -194,3 +194,8 @@ function list_posts_by_taxonomy( $post_type, $taxonomy, $get_terms_args = array(
         }
     }
 }
+function get_top_level_term($term,$taxonomy){
+    if($term->parent==0) return $term;
+    $parent = get_term( $term->parent,$taxonomy);
+    return get_top_level_term( $parent , $taxonomy );
+}

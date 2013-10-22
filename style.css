@@ -20,6 +20,9 @@ Resetting and rebuilding styles have been helped along thanks to the fine work o
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and Blueprint http://www.blueprintcss.org/
+
+Fonte do Projeto: font-family: 'Noto Sans', sans-serif;
+
 */
 
 
@@ -499,6 +502,42 @@ a:active {
 	width: 203px;
 	margin: 10px auto;
 }
+
+/* =Estrutura
+----------------------------------------------- */
+#page {
+	margin: 3em auto 0 auto;
+	max-width: 960px;
+}
+#primary-colecao {
+	float: left;
+	margin: 0 -26.4% 0 0;
+	width: 100%;
+}
+#secondary-colecao {
+	float: left;
+	margin-right: 7.6%;
+	width: 18.8%;
+	background: #CCC;
+}
+
+
+/* =Taxonomy Tipo
+----------------------------------------------- */
+.cada-item {
+	max-width: 150px;
+	height: 240px;
+	margin:0 30px 30px 0;
+	float: left;
+	position: relative;
+}
+
+.titulo-cada-item {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
 
 /* =Content
 ----------------------------------------------- */

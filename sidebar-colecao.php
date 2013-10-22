@@ -5,6 +5,6 @@
  * @package Aqua Theme
  */
 ?>
-	<div id="secondary" class="widget-area" role="complementary">
-		<?php list_posts_by_taxonomy( 'colecao', 'tipos' ); ?>
-	</div><!-- #secondary -->
+	<div id="secondary-colecao" class="widget-area" role="complementary">
+		<?php list_posts_by_taxonomy( 'itens', 'tipos' ); ?>
+	</div><!-- #secondary-colecao -->
