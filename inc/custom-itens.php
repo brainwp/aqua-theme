@@ -50,7 +50,7 @@ function create_post_type_itens() {
 	    'has_archive' => true,
 	    'hierarchical' => true,
 	    'menu_position' => null,
-	    'supports' => array('title','editor','author','thumbnail','excerpt','comments')
+	    'supports' => array('title','editor','thumbnail')
 	    )
     );
 
