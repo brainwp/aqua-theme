@@ -201,3 +201,18 @@ function get_top_level_term($term,$taxonomy){
     $parent = get_term( $term->parent,$taxonomy);
     return get_top_level_term( $parent , $taxonomy );
 }
+
+// hook failed login
+add_action('wp_login_failed', 'my_front_end_login_fail'); 
+ 
+function my_front_end_login_fail($username){
+    // Get the reffering page, where did the post submission come from?
+    $referrer = $_SERVER['HTTP_REFERER'];
+ 
+    // if there's a valid referrer, and it's not the default log-in screen
+    if(!empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin')){
+        // let's append some information (login=failed) to the URL for the theme to use
+        wp_redirect($referrer . '/entrar'); 
+    exit;
+    }
+}
