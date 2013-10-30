@@ -28,10 +28,10 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="cada-item">
-				<div class="titulo-cada-item"><?php the_title(); ?></div>
 				<a class="a-cada-item" href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail( 'colecao-thumb' ); ?>
 				</a><!-- a-cada-item -->
+				<div class="titulo-cada-item"><?php the_title(); ?></div>
 			</div><!-- cada-item -->
 
 			<?php endwhile; ?>
