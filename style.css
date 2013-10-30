@@ -468,6 +468,15 @@ a:active {
 	background: url("images/bg-menu-hover.png") no-repeat scroll -415px 0px transparent;
 }
 
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
 /* =Form Login
 ----------------------------------------------- */
 .form-entrar {

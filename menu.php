@@ -1,4 +1,4 @@
-    <a class="a-item-menu" href="<?php echo home_url('/quem-somos/'); ?>">
+    <a class="a-item-menu open-popup-link" href="#test-popup">
     <div class="item-menu i-quem-somos">
         <span>quem somos</span>
     </div><!-- .item-menu .quem-somos -->
@@ -21,3 +21,10 @@
         <span>contato</span>
     </div><!-- .item-menu .contato-->
     </a>
+    
+    <div id="test-popup" class="white-popup mfp-hide">
+		<?php $page = get_post( $id = 49 );
+			echo $page->post_title . "<br />";
+			echo apply_filters( 'the_content', $page->post_content);
+		?>
+	</div>
