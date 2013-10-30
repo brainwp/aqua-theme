@@ -216,3 +216,13 @@ function my_front_end_login_fail($username){
     exit;
     }
 }
+
+//Adiciona as Minhas Opções
+require_once (get_stylesheet_directory() . '/options/admin_options.php');
+
+
+add_action('init', 'mo_options'); 
+
+function mo_options( $option ){
+	echo get_option( $option );
+}
