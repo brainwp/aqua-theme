@@ -13,7 +13,7 @@
 			$id = $term->parent;
 			$array = get_term_by('id', $id, "tipos", 'ARRAY_A'); ?><?php $taxo_pai = $array[name];
 			?>
-			<div class="titulo-taxonomy"><h1 class="page-title"><?php echo $taxo_pai .' / '. $term->name; ?></h1></div>
+			<div class="titulo-taxonomy"><h1 class="colecao-title"><?php echo $taxo_pai .' / '. $term->name; ?></h1></div>
 
 				<?php
 					// Show an optional term description.
