@@ -1,0 +1,14 @@
+#primary-colecao {
+	width: 70% !important;
+}
+
+.site-content {
+	overflow: hidden;
+}
+
+.esquerda-single-item {
+	background: #CCC;
+}
+
+.esquerda-single-item .thumbholder {
+}
