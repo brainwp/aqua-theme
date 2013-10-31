@@ -13,7 +13,7 @@
 			$id = $term->parent;
 			$array = get_term_by('id', $id, "tipos", 'ARRAY_A'); ?><?php $taxo_pai = $array[name];
 			?>
-			<div class="titulo-taxonomy"><h1 class="page-title"><?php echo $taxo_pai .' / '. $term->name; ?></h1></div>
+			<div class="titulo-taxonomy"><h1 class="colecao-title"><?php echo $taxo_pai .' / '. $term->name; ?></h1></div>
 
 				<?php
 					// Show an optional term description.
@@ -28,10 +28,10 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="cada-item">
-				<div class="titulo-cada-item"><?php the_title(); ?></div>
 				<a class="a-cada-item" href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail( 'colecao-thumb' ); ?>
 				</a><!-- a-cada-item -->
+				<div class="titulo-cada-item"><?php the_title(); ?></div>
 			</div><!-- cada-item -->
 
 			<?php endwhile; ?>

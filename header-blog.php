@@ -39,11 +39,9 @@ jQuery(function() {
 			<a class="a-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
 		</div><!-- .logo -->
 
-    <div class="menu">
-	<?php if (!is_user_logged_in() ) { ?>
-		<?php get_template_part( 'menu' ); ?>
-    <?php } ?>
-	</div><!-- .menu -->
+		<nav id="site-navigation" class="menu-blog navigation-main" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="ul-menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>	
+		</nav><!-- #site-navigation .menu-blog -->
 
 	</header><!-- #masthead -->
 

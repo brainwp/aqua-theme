@@ -86,8 +86,11 @@ add_action( 'widgets_init', 'aqua_theme_widgets_init' );
 function aqua_theme_scripts() {
 	wp_enqueue_style( 'aqua-theme-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'tewenty-eleven-style', get_stylesheet_directory_uri() . '/twentyeleven-style.css' );
+	wp_enqueue_style( 'paralelo-style', get_stylesheet_directory_uri() . '/style-paralelo.css' );
+	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/js/magnific-popup.css' );
 
 	wp_enqueue_script( 'aqua-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'jquery.magnific-popup', get_template_directory_uri() . '/js/jquery.magnific-popup.js', array( 'jquery' ), '', true);
 
 	wp_enqueue_script( 'aqua-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -198,4 +201,29 @@ function get_top_level_term($term,$taxonomy){
     if($term->parent==0) return $term;
     $parent = get_term( $term->parent,$taxonomy);
     return get_top_level_term( $parent , $taxonomy );
+}
+
+// hook failed login
+add_action('wp_login_failed', 'my_front_end_login_fail'); 
+ 
+function my_front_end_login_fail($username){
+    // Get the reffering page, where did the post submission come from?
+    $referrer = $_SERVER['HTTP_REFERER'];
+ 
+    // if there's a valid referrer, and it's not the default log-in screen
+    if(!empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin')){
+        // let's append some information (login=failed) to the URL for the theme to use
+        wp_redirect($referrer . '/entrar'); 
+    exit;
+    }
+}
+
+//Adiciona as Minhas Opções
+require_once (get_stylesheet_directory() . '/options/admin_options.php');
+
+
+add_action('init', 'mo_options'); 
+
+function mo_options( $option ){
+	echo get_option( $option );
 }
