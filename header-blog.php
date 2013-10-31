@@ -39,10 +39,6 @@ jQuery(function() {
 			<a class="a-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
 		</div><!-- .logo -->
 
-		<nav id="site-navigation" class="menu-blog navigation-main" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="ul-menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>	
-		</nav><!-- #site-navigation .menu-blog -->
-
 	</header><!-- #masthead -->
 
 	<div class="site-content">

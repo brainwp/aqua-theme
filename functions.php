@@ -227,3 +227,4 @@ add_action('init', 'mo_options');
 function mo_options( $option ){
 	echo get_option( $option );
 }
+

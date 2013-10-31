@@ -14,6 +14,11 @@
 get_header( 'blog' ); ?>
 
 	<div id="primary" class="content-area">
+
+		<nav id="site-navigation" class="menu-blog navigation-main" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="ul-menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>	
+		</nav><!-- #site-navigation .menu-blog -->
+
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
