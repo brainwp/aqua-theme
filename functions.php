@@ -133,6 +133,7 @@ require get_template_directory() . '/inc/jetpack.php';
  * Custom Post Type Itens
  */
 require get_template_directory() . '/inc/custom-itens.php';
+require get_template_directory() . '/inc/metabox-itens.php';
 
 // Redirect admins to the dashboard and other users elsewhere
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
