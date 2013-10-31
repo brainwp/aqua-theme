@@ -12,3 +12,30 @@
 
 .esquerda-single-item .thumbholder {
 }
+
+.redes {
+	width: 154px;
+	height: 50px;
+	background: url(images/icons.png) no-repeat;
+	margin: 0 auto;
+}
+
+.twitter, .facebook, .telefone {
+	width: 30px;
+	height: 40px;
+	float: left;
+}
+
+.a-twitter, .a-facebook, .a-telefone {
+	width: 30px;
+	height: 40px;
+	position: absolute;
+}
+
+.line {
+	width: 280px;
+	height: 15px;
+	margin: 15px 0;
+	background: url(images/line.png) no-repeat;
+}
+

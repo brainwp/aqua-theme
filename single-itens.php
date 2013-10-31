@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_sidebar( 'colecao' ); ?>
+<?php get_sidebar( 'itens' ); ?>
 
 	<div id="primary-colecao" class="content-area">
 		<main id="main" class="site-main" role="main">

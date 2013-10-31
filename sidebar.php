@@ -6,6 +6,21 @@
  */
 ?>
 	<div id="secondary" class="widget-area" role="complementary">
+		
+		<div class="redes">
+		<div class="twitter">
+			<a class="a-twitter" href="<?php mo_options( 'mo_twitter' ); ?>"></a>
+		</div><!-- twitter -->
+		<div class="facebook">
+			<a class="a-facebook" href="<?php mo_options( 'mo_facebook' ); ?>"></a>
+		</div><!-- facebook -->
+		<div class="telefone">
+			<a class="a-telefone" href="<?php mo_options( 'mo_telefone' ); ?>"></a>
+		</div><!-- telefone -->
+		</div><!-- redes -->
+
+		<div class="line"></div>
+
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
