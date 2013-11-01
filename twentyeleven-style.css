@@ -330,7 +330,7 @@ p {
 	margin-bottom: 1.625em;
 }
 ul, ol {
-	margin: 0 0 1.625em 0;
+	margin: 0 0 1.3em 0;
 }
 ul {
 	list-style: square;
@@ -720,31 +720,7 @@ a:hover {
 .entry-header .entry-meta {
 	padding-right: 76px;
 }
-.entry-title {
-	clear: both;
-	color: #222;
-	font-size: 26px;
-	font-weight: bold;
-	line-height: 1.5em;
-	padding-bottom: .3em;
-	padding-top: 15px;
-}
-.entry-title,
-.entry-title a {
-	color: #222;
-	text-decoration: none;
-}
-.entry-title a:hover,
-.entry-title a:focus,
-.entry-title a:active {
-	color: #1982d1;
-}
-.entry-meta {
-	color: #666;
-	clear: both;
-	font-size: 12px;
-	line-height: 18px;
-}
+
 .entry-meta a {
 	font-weight: bold;
 }

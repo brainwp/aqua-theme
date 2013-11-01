@@ -34,11 +34,11 @@ jQuery(function() {
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead-blog" class="site-header" role="banner">
 		<div class="logo">
 			<a class="a-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
 		</div><!-- .logo -->
 
-	</header><!-- #masthead -->
+	</header><!-- #masthead-blog -->
 
 	<div class="site-content">
