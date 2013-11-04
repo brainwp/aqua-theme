@@ -41,7 +41,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	font-family: 'Noto Sans', sans-serif;
 	color: #3f3f3f;
-	letter-spacing: 0.1em;
 	font-style: inherit;
 	font-weight: inherit;
 	margin: 0;
@@ -402,14 +401,14 @@ a:active {
 .logo {
    background: url(images/logo-aqua.png);
    margin: 0 auto;
-   width: 318px;
-   height: 148px;
+   width: 230px;
+   height: 107px;
 }
 
 .a-logo {
 	position: absolute;
-	width: 318px;
-   height: 148px;
+   width: 230px;
+   height: 107px;
 }
 
 
@@ -425,9 +424,9 @@ a:active {
 
 .item-menu {
 	float: left;
-	width: 115px;
+	width: 140px;
 	height: 270px;
-	margin: 0 10px;
+	margin: 0;
 	position: relative;
 	text-align: center;
 }
@@ -437,36 +436,39 @@ a:active {
 	bottom: 0;
 	margin: 0 auto;
 	text-align: center;
-	color: #FFF;
-	font-size: 0.8em;
+	letter-spacing: 3px;
+	color: #fff;
+    font-size: 1em;
+    text-transform: lowercase;
 }
 
 .item-menu:hover span {
-	color: #333;
+	color: #3F3F3F;
 }
 
 .a-item-menu {
 }
 
-.i-quem-somos span {
-	left: 16px;
+.i-quem-somos  span, .i-blog span, .i-colecao span, .i-contato span {
+	left: 6px;
 	width: 100%;
 }
 
+
 .i-quem-somos:hover {
-	background: url("images/bg-menu-hover.png") no-repeat scroll -10px 0px transparent;
+	background: url("images/bg-menu-hover.png") no-repeat scroll 1px 0px transparent;
 }
 
 .i-blog:hover {
-	background: url("images/bg-menu-hover.png") no-repeat scroll -145px 0px transparent;
+	background: url("images/bg-menu-hover.png") no-repeat scroll -140px 0px transparent;
 }
 
 .i-colecao:hover {
-	background: url("images/bg-menu-hover.png") no-repeat scroll -280px 0px transparent;
+	background: url("images/bg-menu-hover.png") no-repeat scroll -279px 0px transparent;
 }
 
 .i-contato:hover {
-	background: url("images/bg-menu-hover.png") no-repeat scroll -415px 0px transparent;
+	background: url("images/bg-menu-hover.png") no-repeat scroll -419px 0px transparent;
 }
 
 .white-popup {
@@ -477,6 +479,45 @@ a:active {
   max-width: 500px;
   margin: 20px auto;
 }
+
+/* =Menu Blog
+----------------------------------------------- */
+
+#site-navigation {
+    clear: both;
+    display: block;
+    float: left;
+    margin: 0 auto 6px;
+    width: 100%;
+	background: url(images/onda-maior.png) 5px 85px no-repeat;
+	height: 100px;
+}
+
+#site-navigation  li {
+	float: left;
+    position: relative;
+}
+
+#site-navigation  a {
+    display: block;
+    line-height: 3.333em;
+    padding: 0 1.2125em;
+    text-decoration: none;
+	color: #3f3f3f;
+	text-transform: lowercase;
+	font-size: 1em;
+	letter-spacing: 3px;
+	margin-right: 12px;
+}
+
+#site-navigation a:hover {
+	background: #B9D6DB;
+}
+
+#site-navigation  ul {
+    list-style: none outside none;
+}
+
 
 /* =Form Login
 ----------------------------------------------- */
@@ -515,61 +556,52 @@ a:active {
 
 /* =Estrutura
 ----------------------------------------------- */
-#main {
-	clear: both;
-}
-
 #page {
 	margin: 3em auto 0 auto;
-	max-width: 960px;
-	overflow: hidden;
+	max-width: 1024px;
 }
 #primary-colecao {
 	float: left;
-	margin: 0 -26.4% 0 0;
-	width: 100%;
-}
-#secondary-colecao {
-	float: left;
-	width: 18.8%;
-	text-align: right;	
-	margin-right: 30px;
-}
-
- #secondary-colecao ul{
-   list-style: none;
-}
-
- #secondary-colecao ul ul{
-   margin-bottom: 45px;
-}
-
-#secondary-colecao ul li a {
-	color: #3f3f3f;
-   font-size: 1.4em;
-   text-transform: uppercase;
-}
-
- #secondary-colecao ul li ul li a {
-	color: #3f3f3f;
-   font-size: 1.3em;
-   text-transform: lowercase;
+	width: 78%;
 }
 
 #secondary-colecao li {
-	margin: 6px 0;
+	list-style: none;
+	margin: 4px 0;
 }
 
-#secondary-colecao a{
-	color: #000;
+#secondary-colecao {
+	float: left;
+    margin-right: 5%;
+    width: 14%;
+	text-align: right;
+	letter-spacing: 3px;
 }
 
-/* =Sidebar
------------------------------------------------ */
-.tax_term-heading {
-    font-size: 1.3em;
-    text-transform: uppercase;
-	margin-top: 26px;
+#secondary-colecao ul li a {
+color: #3F3F3F;
+font-size: 1.4em;
+text-transform: uppercase;
+padding: 5px;
+}
+
+#secondary-colecao ul li a:hover {
+	background-color:#b9d6db;
+	text-decoration: none;
+}
+
+#secondary-colecao ul li a:active {
+	font-weight:bold;
+}
+
+#secondary-colecao ul li ul li a {
+color: #3F3F3F;
+font-size: 1.3em;
+text-transform: lowercase;
+}
+
+.children {
+	margin-bottom: 35px;
 }
 
 
@@ -577,20 +609,20 @@ a:active {
 ----------------------------------------------- */
 .cada-item {
 	max-width: 150px;
-	height: 240px;
-	margin:0 0 30px 30px;
+	margin:0 30px 30px 0;
 	float: left;
 	position: relative;
 }
 
-.titulo-cada-item {
-	position: absolute;
-	bottom: 0;
-	width: 150px;
-	height: 26px;
-	text-align: center;
+.a-cada-item {
+	margin:0;
 }
 
+.titulo-cada-item {
+	bottom: 0;
+	text-align: center;
+	text-transform: lowercase;
+}
 
 
 /* =Content
@@ -624,15 +656,14 @@ a:active {
 }
 
 .page-title {
-	font-size: 1.2em;
-	text-transform: uppercase;
-	margin: 8px 0 0 30px;
 }
-.page-title a {
-	font-size: 12px;
+
+.colecao-title {
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin: 4px 0 20px;
 	font-weight: bold;
-	letter-spacing: 0;
-	text-transform: none;
 }
 
 /* =Footer

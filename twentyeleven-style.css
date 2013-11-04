@@ -330,7 +330,7 @@ p {
 	margin-bottom: 1.625em;
 }
 ul, ol {
-	margin: 0 0 1.625em 2.5em;
+	margin: 0 0 1.625em 0;
 }
 ul {
 	list-style: square;
@@ -683,7 +683,7 @@ a:hover {
 
 #main {
 	clear: both;
-	padding: 1.625em 0 0;
+	padding:0;
 }
 .page-title {
 	color: #666;
@@ -1313,7 +1313,7 @@ blockquote.pull.alignright {
 	background: #f9f9f9;
 	border: 1px solid #ddd;
 	border-width: 1px 0;
-	margin: 0 -8.9% 1.625em;
+	margin: 0;
 	overflow: hidden;
 	padding: 1.625em 8.9%;
 }
