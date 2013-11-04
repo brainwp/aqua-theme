@@ -35,3 +35,22 @@
 	background: url(images/line.png) no-repeat;
 }
 
+.szg-superzoomgallery {
+	width: 400px;
+	float: left;
+}
+
+.szg-thumbs {
+	float: left;
+	width: 80px;
+}
+
+.szg-main {
+	float: left;
+	width: 300px;
+}
+
+.szg-zoom-box {
+	left: 400px !important;
+}
+
