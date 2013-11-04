@@ -22,15 +22,16 @@
 
 			<div class="cada-item">
 				<a class="a-cada-item" href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail( 'colecao-thumb' ); ?>
+						<?php if ( has_post_thumbnail() ) {
+						the_post_thumbnail( 'colecao-thumb' );
+						} else { ?>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aqua-itens-default.jpg" alt="<?php the_title(); ?>" />
+						<?php } ?>
 				</a><!-- a-cada-item -->
 				<div class="titulo-cada-item"><?php the_title(); ?></div>
 			</div><!-- cada-item -->
 
 			<?php endwhile; ?>
-
-			<?php aqua_theme_content_nav( 'nav-below' ); ?>
-
 		<?php else : ?>
 
 			<?php get_template_part( 'no-results', 'archive' ); ?>
