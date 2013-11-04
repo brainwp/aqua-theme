@@ -32,6 +32,9 @@
 			</div><!-- cada-item -->
 
 			<?php endwhile; ?>
+
+			<?php wp_pagenavi(); ?>
+
 		<?php else : ?>
 
 			<?php get_template_part( 'no-results', 'archive' ); ?>

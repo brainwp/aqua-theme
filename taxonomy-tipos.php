@@ -40,7 +40,7 @@
 
 			<?php endwhile; ?>
 
-			<?php aqua_theme_content_nav( 'nav-below' ); ?>
+			<?php wp_pagenavi(); ?>
 
 		<?php else : ?>
 
