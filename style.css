@@ -474,14 +474,49 @@ a:active {
 .white-popup {
   position: relative;
   background: #FFF;
-  padding: 20px;
+  padding: 50px;
   width: auto;
   max-width: 500px;
   margin: 20px auto;
+  border: 1px solid #B3C5C5;
+}
+
+/* = Blog
+----------------------------------------------- */
+
+.entry-meta {
+	color: #666666;
+	clear: both;
+    font-size: 14px;
+    font-style: italic;
+	line-height: 18px;
 }
 
 /* =Menu Blog
 ----------------------------------------------- */
+.entry-title {
+	clear: both;
+	color: #3f3f3f;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 1.5em;
+	padding-bottom: 3em;
+	padding-top: 15px;
+}
+.entry-title,
+.entry-title a {
+	color: #222222;
+	text-decoration: none;
+}
+.entry-title a:hover,
+.entry-title a:focus,
+.entry-title a:active {
+	color: #1982d1;
+}
+
+#masthead-blog {
+	margin-bottom: 40px;
+}
 
 #site-navigation {
     clear: both;
@@ -557,7 +592,7 @@ a:active {
 /* =Estrutura
 ----------------------------------------------- */
 #page {
-	margin: 3em auto 0 auto;
+	margin: 4em auto 0 auto;
 	max-width: 1024px;
 }
 #primary-colecao {
