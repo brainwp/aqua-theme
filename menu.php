@@ -10,7 +10,7 @@
     </div><!-- .item-menu .blog -->
     </a>
     
-	<a class="a-item-menu" href="<?php echo home_url('/colecao/'); ?>">
+	<a class="a-item-menu" href="<?php echo home_url('/itens/'); ?>">
     <div class="item-menu i-colecao">
         <span>cole&ccedil;&atilde;o</span>
     </div><!-- .item-menu .colecao -->
