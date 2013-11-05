@@ -13,7 +13,7 @@
 
 get_header( 'blog' ); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary-blog" class="content-area">
 
 		<nav id="site-navigation" class="menu-blog navigation-main" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="ul-menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>	

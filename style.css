@@ -114,6 +114,18 @@ textarea {
 	line-height: 1.5;
 }
 
+/* Links */
+a {
+	color: #B9D6DB;
+	text-decoration: none;
+}
+
+a:focus,
+a:active,
+a:hover {
+	text-decoration: none;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -492,20 +504,17 @@ a:active {
 	line-height: 18px;
 }
 
-/* =Menu Blog
------------------------------------------------ */
 .entry-title {
 	clear: both;
 	color: #3f3f3f;
-	font-size: 26px;
-	font-weight: bold;
 	line-height: 1.5em;
-	padding-bottom: 3em;
 	padding-top: 15px;
 }
+
 .entry-title,
 .entry-title a {
 	color: #222222;
+	font-size: 31px;
 	text-decoration: none;
 }
 .entry-title a:hover,
@@ -514,8 +523,17 @@ a:active {
 	color: #1982d1;
 }
 
+.entry-meta a {
+	display: none;
+}
+
 #masthead-blog {
 	margin-bottom: 40px;
+}
+
+#primary-blog {
+	float: left;
+	width: 60%;
 }
 
 #site-navigation {
@@ -553,6 +571,68 @@ a:active {
     list-style: none outside none;
 }
 
+.widget-title {
+	color: #3f3f3f;
+	font-size: 1.3em;
+	letter-spacing: 3px;
+	line-height: 2.6em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.widget ul li {
+	font-size: 1.1em;
+	text-transform: lowercase;
+	list-style: none;
+	text-align: center;
+	list-style: none;
+	letter-spacing: 3px;
+}
+
+.widget a {
+	text-decoration: none;
+	color: #3f3f3f;
+	padding: 5px 10px;
+}
+
+
+.widget a:focus,
+.widget a:active {
+	text-decoration: none;
+}
+
+.widget a:hover {
+	background: #B9D6DB;
+}
+
+.wp-pagenavi {
+	clear:both;
+	text-align: center;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+    margin: 2px;
+    padding: 3px 5px;
+	color: #3f3f3f;
+    text-decoration: none;
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold;
+}
+
+.nextpostslink {
+	font-size: 18px;
+	background: url(images/seta-dir.png) no-repeat 6px 4px;
+	color: transparent !important;
+}
+
+.previouspostslink {
+	font-size: 18px;
+	background: url(images/seta-esq.png) no-repeat 0 4px;	
+	color: transparent !important;
+}
 
 /* =Form Login
 ----------------------------------------------- */
@@ -645,6 +725,8 @@ text-transform: lowercase;
 .cada-item {
 	max-width: 150px;
 	margin:0 30px 30px 0;
+	height: 260px;
+	overflow: hidden;
 	float: left;
 	position: relative;
 }
