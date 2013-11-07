@@ -76,6 +76,7 @@ function aqua_theme_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
+		'after_widget'  => '<div class="line"></div>',
 	) );
 }
 add_action( 'widgets_init', 'aqua_theme_widgets_init' );
