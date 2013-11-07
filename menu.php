@@ -1,4 +1,12 @@
-    <a class="a-item-menu open-popup-link" href="#test-popup">
+<?php
+	if( ! is_page('quem-somos')) {
+		$pop = "#test-popup";
+	} else {
+		$pop = "/quem-somos";
+	}
+?>    
+
+	<a class="a-item-menu open-popup-link" href="<?php echo $pop; ?>">
     <div class="item-menu i-quem-somos">
         <span>quem somos</span>
     </div><!-- .item-menu .quem-somos -->
