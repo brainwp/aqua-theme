@@ -240,3 +240,22 @@ if (!current_user_can('administrator') && !is_admin()) {
   show_admin_bar(false);
 }
 }
+
+
+function id_por_slug( $slug ) {
+
+    $page = get_page_by_path( $slug );
+    if ( $page ) {
+        return $page->ID;
+    } else {
+        return null;
+    }
+
+}
+
+/**
+ * Metabox para pagina Contato
+ */
+require get_template_directory() . '/inc/metabox-contato.php';
+
+
