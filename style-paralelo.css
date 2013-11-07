@@ -45,6 +45,10 @@
 	width: 80px;
 }
 
+.szg-thumbs img {
+	cursor: pointer;
+}
+
 .szg-main {
 	float: left;
 	width: 300px;
@@ -52,5 +56,11 @@
 
 .szg-zoom-box {
 	left: 400px !important;
+}
+
+.direita-single-item {
+    float: left;
+    margin-left: 10px;
+    width: 45%;
 }
 
