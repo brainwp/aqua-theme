@@ -51,7 +51,8 @@
 
 .szg-main {
 	float: left;
-	width: 300px;
+	width: 300px !important;
+	margin-left: 10px;
 }
 
 .szg-zoom-box {
@@ -62,5 +63,11 @@
     float: left;
     margin-left: 10px;
     width: 45%;
+}
+
+.direita-single-item h2 {
+    font-size: 1.4em;
+    padding-top: 0;
+    text-transform: uppercase;
 }
 
