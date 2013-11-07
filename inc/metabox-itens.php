@@ -9,14 +9,23 @@ $meta_box = array(
     'fields' => array(
         array(
             'name' => 'PP',
-            'id' => $prefix . 'tamanhos',
-            'type' => 'checkbox_list',
-			'options' => array(
-				'pp' => 'PP',	
-				'p' => 'P',
-				'm' => 'M',
-				'g' => 'G',
-			),
+            'id' => $prefix . 'pp',
+            'type' => 'checkbox',
+        ),
+		array(
+            'name' => 'P',
+            'id' => $prefix . 'p',
+            'type' => 'checkbox',
+        ),
+        array(
+            'name' => 'M',
+            'id' => $prefix . 'm',
+            'type' => 'checkbox',
+        ),
+        array(
+            'name' => 'G',
+            'id' => $prefix . 'g',
+            'type' => 'checkbox',
         ),
     )
 );

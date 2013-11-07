@@ -71,6 +71,10 @@
     text-transform: uppercase;
 }
 
+.direita-single-item .entry-content {
+	padding: 0;
+}
+
 .tamanho {
 	width: 35px;
 	height: 35px;

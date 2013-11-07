@@ -8,24 +8,22 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 
 <?php 
-$checkboxes = get_post_meta(get_the_ID(),'meta_tamanhos');
-$pp = $checkboxes[0][0];
-$p = $checkboxes[0][1];
-$m = $checkboxes[0][2];
-$g = $checkboxes[0][3];
+$pp = get_post_meta(get_the_ID(),'meta_pp');
+$p = get_post_meta(get_the_ID(),'meta_p');
+$m = get_post_meta(get_the_ID(),'meta_m');
+$g = get_post_meta(get_the_ID(),'meta_g');
 
-$tamanhos = "tamanho";
 if( ! empty( $pp ) ) {
-  $marcado_pp = " marcado-pp";
+  $marcado_pp = "marcado-pp";
 }
 if( ! empty( $p ) ) {
-  $marcado_p = " marcado-p";
+  $marcado_p = "marcado-p";
 }
 if( ! empty( $m ) ) {
-  $marcado_m = " marcado-m";
+  $marcado_m = "marcado-m";
 }
 if( ! empty( $g ) ) {
-  $marcado_g = " marcado-g";
+  $marcado_g = "marcado-g";
 }
 
 /*
@@ -67,22 +65,22 @@ if(empty($checkboxes)) {
 					</div><!-- .entry-content -->
 
 					<div class="tamanhos">
-						<div class="<?php echo $tamanhos; ?>">
+						<div class="tamanho">
 							<div class="<?php echo $marcado_pp; ?>">
 							<span>pp</span>
 							</div>
 						</div><!-- .tamanho-pp -->
-						<div class="<?php echo $tamanhos; ?>">
+						<div class="tamanho">
 							<div class="<?php echo $marcado_p; ?>">
 							<span>p</span>
 							</div>
 						</div><!-- .tamanho-p -->
-						<div class="<?php echo $tamanhos; ?>">
+						<div class="tamanho">
 							<div class="<?php echo $marcado_m; ?>">
 							<span>m</span>
 							</div>
 						</div><!-- .tamanho-m -->
-						<div class="<?php echo $tamanhos; ?>">
+						<div class="tamanho">
 							<div class="<?php echo $marcado_g; ?>">
 							<span>g</span>
 							</div>
