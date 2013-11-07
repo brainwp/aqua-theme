@@ -5,7 +5,7 @@
  * @package Aqua Theme
  */
 
-get_header(); ?>
+get_header(entrar); ?>
 
 	<div class="content-area">
 		<main id="main" class="site-main" role="main">
