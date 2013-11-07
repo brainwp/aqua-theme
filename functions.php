@@ -162,11 +162,7 @@ function no_login_error() {
 
 //add_action('init','to_login');
 function to_login() {
-    $isLoginPage = strpos($_SERVER['REQUEST_URI'], "wp-login.php") !== false;   
-    if(!is_user_logged_in() && !is_admin() &&  !$isLoginPage) {
-        header( 'Location:http://beta.brasa.art.br/aqua/entrar' ) ;
-        die();
-    }
+
 }
 
 function list_posts_by_taxonomy( $post_type, $taxonomy, $get_terms_args = array(), $wp_query_args = array() ){
@@ -220,13 +216,19 @@ function my_front_end_login_fail($username){
     }
 }
 
+add_filter('logout_url', 'logout_home', 10, 2);
+ 
+function logout_home($logouturl, $redir)
+{
+$redir = get_option('siteurl') . "/entrar";
+return $logouturl . '&amp;redirect_to=' . urlencode($redir);
+}
+
 //Adiciona as Minhas Opções
 require_once (get_stylesheet_directory() . '/options/admin_options.php');
-
 
 add_action('init', 'mo_options'); 
 
 function mo_options( $option ){
 	echo get_option( $option );
 }
-

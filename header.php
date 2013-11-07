@@ -1,4 +1,7 @@
 <?php
+    if(!is_user_logged_in() && !is_page('entrar')) {
+		wp_redirect( 'http://beta.brasa.art.br/aqua/entrar' ); exit;
+    }
 /**
  * The Header for our theme.
  *
@@ -40,7 +43,7 @@ jQuery(function() {
 		</div><!-- .logo -->
 
     <div class="menu">
-	<?php if (!is_user_logged_in() ) { ?>
+	<?php if ( is_user_logged_in() ) { ?>
 		<?php get_template_part( 'menu' ); ?>
     <?php } ?>
 	</div><!-- .menu -->
