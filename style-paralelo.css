@@ -71,3 +71,25 @@
     text-transform: uppercase;
 }
 
+.tamanho {
+	width: 35px;
+	height: 35px;
+	float: left;
+	margin: 0 8px 0 0;
+	position: relative;
+}
+
+.tamanho span {
+    display: block;
+    font-weight: bold;
+    margin: 8px 0 0 13px;
+    text-transform: uppercase;
+}
+
+.marcado-pp, .marcado-p, .marcado-m, .marcado-g {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	background: url("images/line-red.png") no-repeat;
+}
+

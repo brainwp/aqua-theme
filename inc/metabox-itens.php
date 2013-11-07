@@ -8,25 +8,16 @@ $meta_box = array(
     'priority' => 'high',
     'fields' => array(
         array(
-            'name' => 'P',
-            'id' => $prefix . 'p',
-            'type' => 'checkbox'
+            'name' => 'PP',
+            'id' => $prefix . 'tamanhos',
+            'type' => 'checkbox_list',
+			'options' => array(
+				'pp' => 'PP',	
+				'p' => 'P',
+				'm' => 'M',
+				'g' => 'G',
+			),
         ),
-        array(
-            'name' => 'M',
-            'id' => $prefix . 'm',
-            'type' => 'checkbox'
-        ),
-        array(
-            'name' => 'G',
-            'id' => $prefix . 'g',
-            'type' => 'checkbox'
-        ),
-        array(
-            'name' => 'GG',
-            'id' => $prefix . 'gg',
-            'type' => 'checkbox'
-        )
     )
 );
 
@@ -71,6 +62,13 @@ function mytheme_show_box() {
             case 'checkbox':
                 echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
                 break;
+            case 'checkbox_list':
+				foreach ( $field['options'] as $value => $name ) {
+					// Append `[]` to the name to get multiple values
+					// Use in_array() to check whether the current option should be checked
+					echo '<input type="checkbox" name="', $field['id'], '[]" id="', $field['id'], '" value="', $value, '"', in_array( $value, $meta ) ? ' checked="checked"' : '', ' /> ', $name, '<br/>';
+				}
+                break;
         }
         echo     '</td><td>',
             '</td></tr>';
@@ -107,6 +105,29 @@ function mytheme_save_data($post_id) {
             delete_post_meta($post_id, $field['id'], $old);
         }
     }
+
+// In save():
+// Line 358: replace it by:
+$old = get_post_meta($post_id, $name, 'meta_tamanhos' != $field['type'] /* If multicheck this can be multiple values */);
+// Lines 409-413: Wrap them in an else-clause, and prepend them by:
+if ( 'multicheck' == $field['type'] ) {
+    // Do the saving in two steps: first get everything we don't have yet
+    // Then get everything we should not have anymore
+    if ( empty( $new ) ) {
+        $new = array();
+    }
+    $aNewToAdd = array_diff( $new, $old );
+    $aOldToDelete = array_diff( $old, $new );
+    foreach ( $aNewToAdd as $newToAdd ) {
+        add_post_meta( $post_id, $name, $newToAdd, false );
+    }
+    foreach ( $aOldToDelete as $oldToDelete ) {
+        delete_post_meta( $post_id, $name, $oldToDelete );
+    }
+} else {
+    // The original lines 409-413
+}
+
 }
 
 ?>

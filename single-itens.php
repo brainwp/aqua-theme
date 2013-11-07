@@ -5,7 +5,43 @@
 	<div id="primary-colecao" class="content-area">
 			<div id="main" class="site-main" role="main">
 			
-			<?php while ( have_posts() ) : the_post(); ?>        
+			<?php while ( have_posts() ) : the_post(); ?>
+
+<?php 
+$checkboxes = get_post_meta(get_the_ID(),'meta_tamanhos');
+$pp = $checkboxes[0][0];
+$p = $checkboxes[0][1];
+$m = $checkboxes[0][2];
+$g = $checkboxes[0][3];
+
+$tamanhos = "tamanho";
+if( ! empty( $pp ) ) {
+  $marcado_pp = " marcado-pp";
+}
+if( ! empty( $p ) ) {
+  $marcado_p = " marcado-p";
+}
+if( ! empty( $m ) ) {
+  $marcado_m = " marcado-m";
+}
+if( ! empty( $g ) ) {
+  $marcado_g = " marcado-g";
+}
+
+/*
+if(empty($checkboxes)) {
+    echo("None.");
+  } else {
+	$array = $checkboxes[0];
+	$class_tamanhos = "tamanhos";
+	$marcado = " marcado";
+	$n = count($array);
+		for($i=0; $i < $n; $i++){
+		  $class_tamanhos .= $marcado;
+		}
+	}
+*/
+?>
 
 				<?php echo do_shortcode('[gallery]'); ?>
 
@@ -31,17 +67,25 @@
 					</div><!-- .entry-content -->
 
 					<div class="tamanhos">
-						<div class="tamanho-pp">
-							pp
+						<div class="<?php echo $tamanhos; ?>">
+							<div class="<?php echo $marcado_pp; ?>">
+							<span>pp</span>
+							</div>
 						</div><!-- .tamanho-pp -->
-						<div class="tamanho-p">
-							p
+						<div class="<?php echo $tamanhos; ?>">
+							<div class="<?php echo $marcado_p; ?>">
+							<span>p</span>
+							</div>
 						</div><!-- .tamanho-p -->
-						<div class="tamanho-m">
-							m
+						<div class="<?php echo $tamanhos; ?>">
+							<div class="<?php echo $marcado_m; ?>">
+							<span>m</span>
+							</div>
 						</div><!-- .tamanho-m -->
-						<div class="tamanho-g">
-							g
+						<div class="<?php echo $tamanhos; ?>">
+							<div class="<?php echo $marcado_g; ?>">
+							<span>g</span>
+							</div>
 						</div><!-- .tamanho-g -->
 					</div><!-- .tamanhos -->
 
