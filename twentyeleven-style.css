@@ -674,15 +674,7 @@ input#searchsubmit {
 	clear: both;
 	padding:0;
 }
-.page-title {
-	color: #666;
-	font-size: 10px;
-	font-weight: 500;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	margin: 0 0 2.6em;
-	text-transform: uppercase;
-}
+
 .page-title a {
 	font-size: 12px;
 	font-weight: bold;
