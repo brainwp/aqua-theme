@@ -429,9 +429,13 @@ a:active {
 
 .menu {
    background: url(images/bg-menu.png) no-repeat;
-   margin: 0 auto 50px auto;
+   margin: 30px auto;
    width: 571px;
    height: 270px;
+}
+
+.page-template-page-entrar-php .menu {
+	height: 235px;
 }
 
 .item-menu {
@@ -488,7 +492,7 @@ a:active {
   background: #FFF;
   padding: 50px;
   width: auto;
-  max-width: 500px;
+  max-width: 900px;
   margin: 20px auto;
   border: 1px solid #B3C5C5;
 }
@@ -638,7 +642,7 @@ a:active {
 ----------------------------------------------- */
 .form-entrar {
 	width: 200px;
-	margin: 40px auto;
+	margin: 0 auto;
 }
 .form-entrar h3 {
 	margin: 0 auto;
@@ -767,6 +771,12 @@ text-transform: lowercase;
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+
+.entry-content-home {
+	text-align: center;
+	font-size: 1.3em; 
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -788,6 +798,45 @@ text-transform: lowercase;
 	margin: 4px 0 20px;
 	font-weight: bold;
 }
+
+
+/* =Contato
+----------------------------------------------- */
+
+.titulo-popup {
+	font-size: 1.2em;
+}
+
+.content-mapa {
+	float: left;
+}
+
+.contact-form label {
+	text-transform: lowercase;
+	font-weight: normal !important;
+}
+
+.grunion-field-label span {
+	display: none;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"] {
+	width: 97.4% !important;
+	border: 1px solid #B3C5C5 !important;
+	background: none !important;
+}
+
+.contact-form textarea {
+	width: 97.7% !important;
+	border: 1px solid #B3C5C5 !important;
+	background: none !important;
+}
+
+.pushbutton-wide {
+	float: right;
+	margin-right: 15px !important;
+}
+
 
 /* =Footer
 ----------------------------------------------- */

@@ -65,20 +65,21 @@
     width: 45%;
 }
 
-.direita-single-item h2 {
-    font-size: 1.2em;
-	text-transform: lowercase;
-    padding-top: 0;
-}
-
 .entry-content-single-item {
 	padding: 15px 0 0 0;
 	margin: 0;
 }
 
 .entry-categoria {
-	font-size: 1.3em;
+	font-size: 1.2em;
+	margin-bottom: 30px;
 	text-transform: uppercase;
+}
+
+.entry-title-single-item {
+    font-size: 1.2em;
+	text-transform: lowercase;
+    padding-top: 0;
 }
 
 .tamanho {

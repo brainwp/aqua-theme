@@ -50,7 +50,7 @@ if(empty($checkboxes)) {
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 						<h2 class="entry-categoria"><?php the_terms(get_the_ID() , 'tipos'); ?></h2>
-						<h2 class="entry-title"><?php the_title(); ?></h2>
+						<h2 class="entry-title-single-item"><?php the_title(); ?></h2>
 
 						<!-- <div class="entry-meta">
 							<?php // aqua_theme_posted_on(); ?>
