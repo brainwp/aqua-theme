@@ -847,7 +847,19 @@ text-transform: lowercase;
 
 .site-info {
 	text-align: center;
-	margin: 150px auto 0;
+	margin: 120px auto 0;
+}
+
+.post-type-archive .site-info, .tax-tipos .site-info {
+	margin: 80px auto 0;
+}
+
+.page-template-page-home-php  .site-info{
+	margin: 0;
+}
+
+.page-template-page-entrar-php .site-info {
+	margin-top: 60px;
 }
 
 
