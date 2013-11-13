@@ -327,7 +327,7 @@ textarea {
 
 /* Links */
 a {
-	color: royalblue;
+	color: #73aace ;
 }
 a:visited {
 	color: purple;
@@ -335,7 +335,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #175f8e;
 }
 
 /* Alignment */
@@ -429,9 +429,13 @@ a:active {
 
 .menu {
    background: url(images/bg-menu.png) no-repeat;
-   margin: 0 auto 50px auto;
+   margin: 30px auto;
    width: 571px;
    height: 270px;
+}
+
+.page-template-page-entrar-php .menu {
+	height: 235px;
 }
 
 .item-menu {
@@ -488,7 +492,7 @@ a:active {
   background: #FFF;
   padding: 50px;
   width: auto;
-  max-width: 500px;
+  max-width: 900px;
   margin: 20px auto;
   border: 1px solid #B3C5C5;
 }
@@ -514,13 +518,13 @@ a:active {
 .entry-title,
 .entry-title a {
 	color: #222222;
-	font-size: 31px;
+	font-size: 1.4em;
 	text-decoration: none;
 }
 .entry-title a:hover,
 .entry-title a:focus,
 .entry-title a:active {
-	color: #1982d1;
+	color: #73AACE;
 }
 
 .entry-meta a {
@@ -638,7 +642,7 @@ a:active {
 ----------------------------------------------- */
 .form-entrar {
 	width: 200px;
-	margin: 40px auto;
+	margin: 0 auto;
 }
 .form-entrar h3 {
 	margin: 0 auto;
@@ -767,12 +771,24 @@ text-transform: lowercase;
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+
+.entry-content-home {
+	text-align: center;
+	font-size: 1.3em; 
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
 
-.page-title {
+.page-title {   
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 2.6em;
+    margin-top: 20px;
+    text-transform: uppercase;
 }
 
 .colecao-title {
@@ -783,6 +799,45 @@ text-transform: lowercase;
 	font-weight: bold;
 }
 
+
+/* =Contato
+----------------------------------------------- */
+
+.titulo-popup {
+	font-size: 1.2em;
+}
+
+.content-mapa {
+	float: left;
+}
+
+.contact-form label {
+	text-transform: lowercase;
+	font-weight: normal !important;
+}
+
+.grunion-field-label span {
+	display: none;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"] {
+	width: 97.4% !important;
+	border: 1px solid #B3C5C5 !important;
+	background: none !important;
+}
+
+.contact-form textarea {
+	width: 97.7% !important;
+	border: 1px solid #B3C5C5 !important;
+	background: none !important;
+}
+
+.pushbutton-wide {
+	float: right;
+	margin-right: 15px !important;
+}
+
+
 /* =Footer
 ----------------------------------------------- */
 
@@ -792,9 +847,26 @@ text-transform: lowercase;
 
 .site-info {
 	text-align: center;
-	margin: 150px auto 0;
+	margin: 120px auto 0;
 }
 
+.post-type-archive .site-info, .tax-tipos .site-info {
+	margin: 80px auto 0;
+}
+
+.page-template-page-home-php  .site-info{
+	margin: 0;
+}
+
+.page-template-page-entrar-php .site-info {
+	margin-top: 60px;
+}
+
+/* =404
+----------------------------------------------- */
+.titulo-404 {
+	font-size: 4em;
+}
 
 /* =Asides
 ----------------------------------------------- */

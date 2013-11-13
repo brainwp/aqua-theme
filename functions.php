@@ -217,6 +217,24 @@ function my_front_end_login_fail($username){
 }
 
 add_filter('logout_url', 'logout_home', 10, 2);
+
+add_filter('login_redirect', '_catch_login_error', 10, 3);
+ 
+function _catch_login_error($redir1, $redir2, $wperr_user)
+{
+    if(!is_wp_error($wperr_user) || !$wperr_user->get_error_code()) return $redir1;
+	$referrer = $_SERVER['HTTP_REFERER'];
+    switch($wperr_user->get_error_code())
+    {
+        case 'incorrect_password':
+        case 'empty_password':
+        case 'invalid_username':
+        default:
+            wp_redirect($referrer . '/entrar'); // modify this as you wish
+    }
+ 
+    return $redir1;
+}
  
 function logout_home($logouturl, $redir)
 {
@@ -256,6 +274,9 @@ function id_por_slug( $slug ) {
 /**
  * Metabox para pagina Contato
  */
+
 require get_template_directory() . '/inc/metabox-contato.php';
+/*require get_template_directory() . '/inc/metabox-contato.php';*/
+
 
 

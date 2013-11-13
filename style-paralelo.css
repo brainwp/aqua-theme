@@ -19,6 +19,7 @@
 .twitter, .facebook, .telefone {
 	width: 30px;
 	height: 40px;
+	margin-left: 17px;
 	float: left;
 }
 
@@ -65,10 +66,21 @@
     width: 45%;
 }
 
-.direita-single-item h2 {
-    font-size: 1.4em;
+.entry-content-single-item {
+	padding: 15px 0 0 0;
+	margin: 0;
+}
+
+.entry-categoria {
+	font-size: 1.2em;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+.entry-title-single-item {
+    font-size: 1.2em;
+	text-transform: lowercase;
     padding-top: 0;
-    text-transform: uppercase;
 }
 
 .direita-single-item .entry-content {
