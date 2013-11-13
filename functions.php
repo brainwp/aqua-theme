@@ -162,11 +162,7 @@ function no_login_error() {
 
 //add_action('init','to_login');
 function to_login() {
-    $isLoginPage = strpos($_SERVER['REQUEST_URI'], "wp-login.php") !== false;   
-    if(!is_user_logged_in() && !is_admin() &&  !$isLoginPage) {
-        header( 'Location:http://beta.brasa.art.br/aqua/entrar' ) ;
-        die();
-    }
+
 }
 
 function list_posts_by_taxonomy( $post_type, $taxonomy, $get_terms_args = array(), $wp_query_args = array() ){
@@ -220,13 +216,65 @@ function my_front_end_login_fail($username){
     }
 }
 
+add_filter('logout_url', 'logout_home', 10, 2);
+
+add_filter('login_redirect', '_catch_login_error', 10, 3);
+ 
+function _catch_login_error($redir1, $redir2, $wperr_user)
+{
+    if(!is_wp_error($wperr_user) || !$wperr_user->get_error_code()) return $redir1;
+	$referrer = $_SERVER['HTTP_REFERER'];
+    switch($wperr_user->get_error_code())
+    {
+        case 'incorrect_password':
+        case 'empty_password':
+        case 'invalid_username':
+        default:
+            wp_redirect($referrer . '/entrar'); // modify this as you wish
+    }
+ 
+    return $redir1;
+}
+
+ 
+function logout_home($logouturl, $redir)
+{
+$redir = get_option('siteurl') . "/entrar";
+return $logouturl . '&amp;redirect_to=' . urlencode($redir);
+}
+
 //Adiciona as Minhas Opções
 require_once (get_stylesheet_directory() . '/options/admin_options.php');
-
 
 add_action('init', 'mo_options'); 
 
 function mo_options( $option ){
 	echo get_option( $option );
 }
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}
+
+
+function id_por_slug( $slug ) {
+
+    $page = get_page_by_path( $slug );
+    if ( $page ) {
+        return $page->ID;
+    } else {
+        return null;
+    }
+
+}
+
+/**
+ * Metabox para pagina Contato
+ */
+/*require get_template_directory() . '/inc/metabox-contato.php';*/
+
 
