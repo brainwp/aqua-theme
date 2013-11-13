@@ -278,5 +278,13 @@ function id_por_slug( $slug ) {
 require get_template_directory() . '/inc/metabox-contato.php';
 /*require get_template_directory() . '/inc/metabox-contato.php';*/
 
+if ( !function_exists( 'wp_print_r' ) ) {
+    function wp_print_r( $args, $die = true ) {
+        $echo = '<pre>' . print_r( $args, true ) . '</pre>';
+        if ( $die ) die( $echo );
+        else echo $echo;
+    }
+}
+
 
 
