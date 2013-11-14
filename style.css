@@ -697,6 +697,11 @@ a:active {
 	letter-spacing: 3px;
 }
 
+.sub-menu .current-menu-item a {
+	background-color:#b9d6db;
+	text-decoration: none;
+}
+
 #secondary-colecao ul li a {
 color: #3F3F3F;
 font-size: 1.4em;
@@ -717,6 +722,10 @@ padding: 5px;
 color: #3F3F3F;
 font-size: 1.3em;
 text-transform: lowercase;
+}
+
+#menu-colecao ul.sub-menu {
+	margin: 0 0 30px 0;
 }
 
 .children {

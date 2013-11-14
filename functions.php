@@ -47,6 +47,7 @@ function aqua_theme_setup() {
 	 */
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'aqua-theme' ),
+		'colecao' => __( 'Colecao Menu', 'aqua-theme' ),
 	) );
 
 	/**
@@ -257,7 +258,6 @@ if (!current_user_can('administrator') && !is_admin()) {
 }
 }
 
-
 function id_por_slug( $slug ) {
 
     $page = get_page_by_path( $slug );
@@ -278,6 +278,34 @@ if ( !function_exists( 'wp_print_r' ) ) {
         if ( $die ) die( $echo );
         else echo $echo;
     }
+}
+
+
+add_filter('wp_list_categories', 'add_slug_class_wp_list_categories');
+function add_slug_class_wp_list_categories($list) {
+$args = array(
+'type'                     => 'itens',
+'child_of'                 => 0,
+'parent'                   => '',
+'orderby'                  => 'name',
+'order'                    => 'ASC',
+'hide_empty'               => 1,
+'hierarchical'             => 1,
+'exclude'                  => '',
+'include'                  => '',
+'number'                   => '',
+'taxonomy'                 => 'tipos',
+'pad_counts'               => false );
+$cats = get_categories($args);
+	foreach($cats as $cat) {
+	$find = 'cat-item-' . $cat->term_id . '"';
+	$replace = 'cat-item-' . $cat->slug . ' cat-item-' . $cat->term_id . '"';
+	$list = str_replace( $find, $replace, $list );
+	$find = 'cat-item-' . $cat->term_id . ' ';
+	$replace = 'cat-item-' . $cat->slug . ' cat-item-' . $cat->term_id . ' ';
+	$list = str_replace( $find, $replace, $list );
+	}
+return $list;
 }
 
 
