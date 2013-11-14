@@ -246,13 +246,11 @@ return $logouturl . '&amp;redirect_to=' . urlencode($redir);
 require_once (get_stylesheet_directory() . '/options/admin_options.php');
 
 add_action('init', 'mo_options'); 
-
 function mo_options( $option ){
 	echo get_option( $option );
 }
 
 add_action('after_setup_theme', 'remove_admin_bar');
-
 function remove_admin_bar() {
 if (!current_user_can('administrator') && !is_admin()) {
   show_admin_bar(false);
@@ -271,12 +269,8 @@ function id_por_slug( $slug ) {
 
 }
 
-/**
- * Metabox para pagina Contato
- */
-
-require get_template_directory() . '/inc/metabox-contato.php';
 /*require get_template_directory() . '/inc/metabox-contato.php';*/
+require_once (get_stylesheet_directory() . '/inc/metabox-itens.php');
 
 if ( !function_exists( 'wp_print_r' ) ) {
     function wp_print_r( $args, $die = true ) {
