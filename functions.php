@@ -8,6 +8,18 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
+
+function custom_login() { ?>
+    <style type="text/css">
+		#login h1 a {
+			background-image:url(<?php echo get_template_directory_uri(); ?>/images/logo-aqua.png) !important;
+			padding-bottom: 60px;
+			background-size: 230px 107px;
+		}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'custom_login' );
+
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
