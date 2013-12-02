@@ -410,6 +410,12 @@ a:active {
 
 /* =Cabecalho Header
 ----------------------------------------------- */
+.sair {
+	position: fixed;
+	right: 20px;
+	top: 10px;
+}
+
 .logo {
    background: url(images/logo-aqua.png);
    margin: 0 auto;

@@ -35,6 +35,9 @@ jQuery(function() {
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class="sair"><?php wp_loginout( home_url( '/' ) ); ?></div><!-- .sair -->
+
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
