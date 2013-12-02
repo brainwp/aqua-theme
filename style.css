@@ -56,6 +56,7 @@ html {
 }
 body {
 	background: #fff;
+	text-transform: uppercase;
 }
 article,
 aside,
@@ -586,7 +587,6 @@ a:active {
 	font-size: 1.3em;
 	letter-spacing: 3px;
 	line-height: 2.6em;
-	text-transform: uppercase;
 	text-align: center;
 }
 
@@ -665,7 +665,6 @@ a:active {
 .form-entrar button, input[type="submit"] {
 	background-color: #bad7db;
 	color: #FFF;
-	text-transform: uppercase;
 	margin: 0 auto;
 	width: 203px;
 }
@@ -709,10 +708,9 @@ a:active {
 }
 
 #secondary-colecao ul li a {
-color: #3F3F3F;
-font-size: 1.4em;
-text-transform: uppercase;
-padding: 5px;
+	color: #3F3F3F;
+	font-size: 1.4em;
+	padding: 5px;
 }
 
 #secondary-colecao ul li a:hover {
@@ -725,9 +723,9 @@ padding: 5px;
 }
 
 #secondary-colecao ul li ul li a {
-color: #3F3F3F;
-font-size: 1.3em;
-text-transform: lowercase;
+	color: #3F3F3F;
+	font-size: 1.3em;
+	text-transform: lowercase;
 }
 
 #menu-colecao ul.sub-menu {
@@ -803,12 +801,10 @@ text-transform: lowercase;
     letter-spacing: 0.1em;
     line-height: 2.6em;
     margin-top: 20px;
-    text-transform: uppercase;
 }
 
 .colecao-title {
 	font-size: 1em;
-	text-transform: uppercase;
 	letter-spacing: 3px;
 	margin: 4px 0 20px;
 	font-weight: bold;
