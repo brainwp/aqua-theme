@@ -36,7 +36,9 @@ jQuery(function() {
 
 <body <?php body_class(); ?>>
 
-<div class="sair"><?php wp_loginout( home_url( '/' ) ); ?></div><!-- .sair -->
+<?php if ( is_user_logged_in()) { ?>
+	<div class="sair"><?php wp_loginout( home_url( '/' ) ); ?></div><!-- .sair -->
+<?php } ?>
 
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
