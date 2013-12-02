@@ -38,7 +38,6 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-size: 100%;
 	font-family: 'Museo Sans', sans-serif;
 	color: #3f3f3f;
 	font-style: inherit;
@@ -110,8 +109,7 @@ select,
 textarea {
 	color: #404040;
 	font-family: 'Noto Sans', sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 12px;
 	line-height: 1.5;
 }
 
@@ -141,6 +139,7 @@ hr {
 /* Text elements */
 p {
 	margin-bottom: 1.5em;
+	font-size: 12px;
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -177,8 +176,8 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.5rem;
+	font-size: 11px;
+	font-size: 1.1rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -198,7 +197,7 @@ mark, ins {
 }
 sup,
 sub {
-	font-size: 75%;
+	font-size: 70%;
 	height: 0;
 	line-height: 0;
 	position: relative;
@@ -211,10 +210,10 @@ sub {
 	top: .5ex;
 }
 small {
-	font-size: 75%;
+	font-size: 70%;
 }
 big {
-	font-size: 125%;
+	font-size: 120%;
 }
 figure {
 	margin: 0;
@@ -253,8 +252,8 @@ input[type="submit"] {
 	color: rgba(0, 0, 0, .8);
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	font-size: 12px;
-	font-size: 1.2rem;
+	font-size: 10px;
+	font-size: 1.0rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -371,7 +370,7 @@ a:active {
 	clip: auto !important;
 	color: #21759b;
 	display: block;
-	font-size: 14px;
+	font-size: 11px;
 	font-weight: bold;
 	height: auto;
 	left: 5px;
@@ -461,8 +460,7 @@ a:active {
 	text-align: center;
 	letter-spacing: 3px;
 	color: #fff;
-    font-size: 1em;
-    text-transform: lowercase;
+    font-size: 0.9em;
 }
 
 .item-menu:hover span {
@@ -510,9 +508,10 @@ a:active {
 .entry-meta {
 	color: #666666;
 	clear: both;
-    font-size: 14px;
+    font-size: 11px;
     font-style: italic;
 	line-height: 18px;
+	font-size: 10px;
 }
 
 .entry-title {
@@ -524,9 +523,9 @@ a:active {
 
 .entry-title,
 .entry-title a {
-	color: #222222;
-	font-size: 1.4em;
-	text-decoration: none;
+    color: #222222;
+    margin: 0 0 5px;
+    text-decoration: none;
 }
 .entry-title a:hover,
 .entry-title a:focus,
@@ -568,8 +567,6 @@ a:active {
     padding: 0 1.2125em;
     text-decoration: none;
 	color: #3f3f3f;
-	text-transform: lowercase;
-	font-size: 1em;
 	letter-spacing: 3px;
 	margin-right: 12px;
 }
@@ -584,14 +581,14 @@ a:active {
 
 .widget-title {
 	color: #3f3f3f;
-	font-size: 1.3em;
+	font-size: 1em;
 	letter-spacing: 3px;
 	line-height: 2.6em;
 	text-align: center;
 }
 
 .widget ul li {
-	font-size: 1.1em;
+	font-size: 1em;
 	text-transform: lowercase;
 	list-style: none;
 	text-align: center;
@@ -633,13 +630,13 @@ a:active {
 }
 
 .nextpostslink {
-	font-size: 18px;
+	font-size: 12px;
 	background: url(images/seta-dir.png) no-repeat 6px 4px;
 	color: transparent !important;
 }
 
 .previouspostslink {
-	font-size: 18px;
+	font-size: 12px;
 	background: url(images/seta-esq.png) no-repeat 0 4px;	
 	color: transparent !important;
 }
@@ -653,6 +650,7 @@ a:active {
 .form-entrar h3 {
 	margin: 0 auto;
 	text-align: center;
+	font-size: 12px;
 }
 .form-entrar input[type="password"] {
     border: 1px solid #BAD7DB;
@@ -709,7 +707,7 @@ a:active {
 
 #secondary-colecao ul li a {
 	color: #3F3F3F;
-	font-size: 1.4em;
+	font-size: 1.1em;
 	padding: 5px;
 }
 
@@ -724,7 +722,7 @@ a:active {
 
 #secondary-colecao ul li ul li a {
 	color: #3F3F3F;
-	font-size: 1.3em;
+	font-size: 1em;
 	text-transform: lowercase;
 }
 
@@ -787,7 +785,7 @@ a:active {
 
 .entry-content-home {
 	text-align: center;
-	font-size: 1.3em; 
+	font-size: 1em; 
 }
 
 .page-links {
@@ -815,7 +813,7 @@ a:active {
 ----------------------------------------------- */
 
 .titulo-popup {
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 .content-mapa {
@@ -876,7 +874,7 @@ a:active {
 /* =404
 ----------------------------------------------- */
 .titulo-404 {
-	font-size: 4em;
+	font-size: 3em;
 }
 
 /* =Asides

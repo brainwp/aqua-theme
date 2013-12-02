@@ -22,8 +22,8 @@ small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
+	font-size: 12px;
 	border: 0;
-	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
 	margin: 0;
@@ -326,9 +326,6 @@ hr {
 }
 
 /* Text elements */
-p {
-	margin-bottom: 1.625em;
-}
 ul, ol {
 	margin: 0 0 1.625em 0;
 }
@@ -697,16 +694,8 @@ input#searchsubmit {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 }
-.entry-title,
-.entry-header .entry-meta {
+.entry-title {
 	padding-right: 76px;
-}
-
-.entry-meta {
-	color: #666;
-	clear: both;
-	font-size: 13px;
-	line-height: 18px;
 }
 
 .single-author .entry-meta .by-author {
