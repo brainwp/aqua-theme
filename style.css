@@ -417,10 +417,10 @@ a:active {
 }
 
 .logo {
-   background: url(images/logo-aqua.png);
-   margin: 0 auto;
-   width: 230px;
-   height: 107px;
+    background: url("images/logo-aqua.png") repeat scroll -43px 0 rgba(0, 0, 0, 0);
+    height: 107px;
+    margin: 0 auto;
+    width: 230px;
 }
 
 .a-logo {
