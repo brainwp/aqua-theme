@@ -38,8 +38,14 @@
 	</div>
 
     <div id="contato-popup" class="white-popup mfp-hide">
+
 		<?php $contato = get_post( $id = 83 ); ?>
-			<?php echo "<h2 class='titulo-popup'>" . $contato->post_title . "</h2><br />"; ?>
-			<div style="margin-right:20px; float:left;"><?php echo do_shortcode('[google-map-sc id="83" width="430" height="260" align="left" zoom="15"]'); ?></div>
-			<?php echo apply_filters( 'the_content', $contato->post_content); ?>
+
+			<div class="esquerda-pop-contato">
+				<iframe width="360" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?oe=utf-8&amp;client=firefox-a&amp;q=R+Professor+Cesare+Lombroso+117++Bom+Retiro&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Prof.+Cesare+Lombroso,+117+-+Bom+Retiro,+S%C3%A3o+Paulo,+01122-021&amp;ll=-23.53152,-46.640331&amp;spn=0.00901,0.016512&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+			</div>
+			<div class="direita-pop-contato">
+				<?php echo apply_filters( 'the_content', $contato->post_content); ?>
+				<?php echo do_shortcode("[contact-form][contact-field label='E-mail' type='text' required='1'/][contact-field label='Mensagem' type='textarea' required='1'/][/contact-form]"); ?>
+			</div>
 	</div>

@@ -502,6 +502,26 @@ a:active {
   border: 1px solid #B3C5C5;
 }
 
+#contato-popup {
+	overflow: hidden;
+}
+
+.contact-form div {
+	margin-bottom: 10px;
+}
+
+.esquerda-pop-contato {
+	width: 350px;
+	height: 260px;
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+.direita-pop-contato {
+	width: 45%;
+	float: left;
+}
+
 /* = Blog
 ----------------------------------------------- */
 
@@ -589,7 +609,6 @@ a:active {
 
 .widget ul li {
 	font-size: 1em;
-	text-transform: lowercase;
 	list-style: none;
 	text-align: center;
 	list-style: none;
@@ -661,10 +680,10 @@ a:active {
 
 
 .form-entrar button, input[type="submit"] {
-	background-color: #bad7db;
-	color: #FFF;
-	margin: 0 auto;
-	width: 203px;
+    background-color: #BAD7DB;
+    color: #FFFFFF;
+    margin: 15px 0 0;
+    padding: 10px 30px;
 }
 
 .form-entrar .pass {
@@ -723,7 +742,6 @@ a:active {
 #secondary-colecao ul li ul li a {
 	color: #3F3F3F;
 	font-size: 1em;
-	text-transform: lowercase;
 }
 
 #menu-colecao ul.sub-menu {
@@ -753,7 +771,6 @@ a:active {
 .titulo-cada-item {
 	bottom: 0;
 	text-align: center;
-	text-transform: lowercase;
 }
 
 
@@ -814,6 +831,7 @@ a:active {
 
 .titulo-popup {
 	font-size: 1em;
+	font-weight: bold;
 }
 
 .content-mapa {
@@ -821,7 +839,6 @@ a:active {
 }
 
 .contact-form label {
-	text-transform: lowercase;
 	font-weight: normal !important;
 }
 
@@ -839,11 +856,11 @@ a:active {
 	width: 97.7% !important;
 	border: 1px solid #B3C5C5 !important;
 	background: none !important;
+	height: 100px;
 }
 
 .pushbutton-wide {
 	float: right;
-	margin-right: 15px !important;
 }
 
 
