@@ -520,6 +520,7 @@ a:active {
 .direita-pop-contato {
 	width: 45%;
 	float: left;
+	margin: 0 0 0 20px;
 }
 
 /* = Blog
@@ -682,7 +683,7 @@ a:active {
 .form-entrar button, input[type="submit"] {
     background-color: #BAD7DB;
     color: #FFFFFF;
-    margin: 15px 0 0 -5px;
+    margin: 15px 0 0 0;
     padding: 10px;
     width: 143px;
 }
@@ -712,6 +713,7 @@ a:active {
 #secondary-colecao li {
 	list-style: none;
 	margin: 4px 0;
+	font-size: 11px;
 }
 
 #secondary-colecao {
@@ -863,7 +865,7 @@ a:active {
 }
 
 .pushbutton-wide {
-	float: right;
+	float: left;
 }
 
 

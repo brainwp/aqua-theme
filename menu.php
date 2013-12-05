@@ -42,7 +42,7 @@
 		<?php $contato = get_post( $id = 83 ); ?>
 
 			<div class="esquerda-pop-contato">
-				<iframe width="360" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?oe=utf-8&amp;client=firefox-a&amp;q=R+Professor+Cesare+Lombroso+117++Bom+Retiro&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Prof.+Cesare+Lombroso,+117+-+Bom+Retiro,+S%C3%A3o+Paulo,+01122-021&amp;ll=-23.53152,-46.640331&amp;spn=0.00901,0.016512&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+				<iframe width="360" height="333" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?oe=utf-8&amp;client=firefox-a&amp;q=R+Professor+Cesare+Lombroso+117++Bom+Retiro&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Prof.+Cesare+Lombroso,+117+-+Bom+Retiro,+S%C3%A3o+Paulo,+01122-021&amp;ll=-23.53152,-46.640331&amp;spn=0.00901,0.016512&amp;t=m&amp;z=14&amp;output=embed"></iframe>
 			</div>
 			<div class="direita-pop-contato">
 				<?php echo apply_filters( 'the_content', $contato->post_content); ?>
