@@ -733,6 +733,7 @@ a:active {
 	color: #3F3F3F;
 	font-size: 1.1em;
 	padding: 5px;
+	font-weight: bold;
 }
 
 #secondary-colecao ul li a:hover {
@@ -747,6 +748,7 @@ a:active {
 #secondary-colecao ul li ul li a {
 	color: #3F3F3F;
 	font-size: 1em;
+	font-weight: lighter;
 }
 
 #menu-colecao ul.sub-menu {
