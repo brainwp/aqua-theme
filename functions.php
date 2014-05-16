@@ -53,6 +53,8 @@ function aqua_theme_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'colecao-thumb', 150, 200, true );
+	add_image_size( 'colecao-medium', 400 );
+	add_image_size( 'colecao-full', 700 );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.

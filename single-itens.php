@@ -7,41 +7,27 @@
 			
 			<?php while ( have_posts() ) : the_post(); ?>
 
-<?php 
-$pp = get_post_meta(get_the_ID(),'meta_pp');
-$p = get_post_meta(get_the_ID(),'meta_p');
-$m = get_post_meta(get_the_ID(),'meta_m');
-$g = get_post_meta(get_the_ID(),'meta_g');
+			<?php 
+				$pp = get_post_meta(get_the_ID(),'meta_pp');
+				$p = get_post_meta(get_the_ID(),'meta_p');
+				$m = get_post_meta(get_the_ID(),'meta_m');
+				$g = get_post_meta(get_the_ID(),'meta_g');
 
-if( ! empty( $pp ) ) {
-  $marcado_pp = "marcado-pp";
-}
-if( ! empty( $p ) ) {
-  $marcado_p = "marcado-p";
-}
-if( ! empty( $m ) ) {
-  $marcado_m = "marcado-m";
-}
-if( ! empty( $g ) ) {
-  $marcado_g = "marcado-g";
-}
+				if( ! empty( $pp ) ) {
+				  $marcado_pp = "marcado-pp";
+				}
+				if( ! empty( $p ) ) {
+				  $marcado_p = "marcado-p";
+				}
+				if( ! empty( $m ) ) {
+				  $marcado_m = "marcado-m";
+				}
+				if( ! empty( $g ) ) {
+				  $marcado_g = "marcado-g";
+				}
+			?>
 
-/*
-if(empty($checkboxes)) {
-    echo("None.");
-  } else {
-	$array = $checkboxes[0];
-	$class_tamanhos = "tamanhos";
-	$marcado = " marcado";
-	$n = count($array);
-		for($i=0; $i < $n; $i++){
-		  $class_tamanhos .= $marcado;
-		}
-	}
-*/
-?>
-
-				<?php echo do_shortcode('[gallery]'); ?>
+			<?php echo do_shortcode('[gallery]'); ?>
 
 			<div class="direita-single-item">
 
