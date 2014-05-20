@@ -707,7 +707,7 @@ a:active {
 }
 #primary-colecao {
 	float: left;
-	width: 78%;
+	width: 80%;
 }
 
 #secondary-colecao li {
@@ -718,7 +718,7 @@ a:active {
 
 #secondary-colecao {
 	float: left;
-    margin-right: 5%;
+    margin-right: 4%;
     width: 14%;
 	text-align: right;
 	letter-spacing: 3px;
@@ -1021,4 +1021,9 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+.edit-link {
+	display: block;
+	clear: both;
+	margin: 50px 10px;
 }

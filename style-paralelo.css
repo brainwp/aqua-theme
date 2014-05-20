@@ -37,7 +37,7 @@
 }
 
 .szg-superzoomgallery {
-	width: 400px;
+	width: 500px;
 	float: left;
 }
 
@@ -52,7 +52,7 @@
 
 .szg-main {
 	float: left;
-	width: 300px !important;
+	width: 400px !important;
 	margin-left: 10px;
 }
 
@@ -63,7 +63,7 @@
 .direita-single-item {
     float: left;
     margin-left: 10px;
-    width: 45%;
+    width: 25%;
 }
 
 .entry-content-single-item {
