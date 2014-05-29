@@ -57,7 +57,7 @@
 }
 
 .szg-zoom-box {
-	left: 400px !important;
+	left: 500px !important;
 }
 
 .direita-single-item {
@@ -68,7 +68,7 @@
 
 .entry-content-single-item {
 	padding: 15px 0 0 0;
-	margin: 0;
+	margin: 0 0 20px 0;
 }
 
 .entry-categoria {
