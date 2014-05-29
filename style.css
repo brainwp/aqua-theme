@@ -664,7 +664,7 @@ a:active {
 /* =Form Login
 ----------------------------------------------- */
 .form-entrar {
-	width: 200px;
+	width: 180px;
 	margin: 0 auto;
 }
 .form-entrar h3 {
@@ -677,25 +677,26 @@ a:active {
     padding: 10px 5px;
     text-align: center;
 	margin: 0 auto;
+	width: 100%;
 }
 
 
 .form-entrar button, input[type="submit"] {
     background-color: #BAD7DB;
     color: #FFFFFF;
-    margin: 15px 0 0 0;
-    padding: 10px;
-    width: 143px;
+    margin: 15px auto 0 3%;
+    padding: 13px;
+    width: 100%;
 }
 
 .form-entrar .pass {
 	margin: 10px auto 0 auto;
-	width: 150px;
+	width: 100%;
 }
 
 .form-entrar .submit {
 	text-align: center;
-	width: 150px;
+	width: 100%;
 	margin: 0 auto 10px auto;
 }
 
