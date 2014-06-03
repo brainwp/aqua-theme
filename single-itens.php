@@ -27,94 +27,96 @@
 				}
 			?>
 
-			<?php echo do_shortcode('[gallery]'); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header-single-item">
+					<?php
+						global $post;
+						$terms = wp_get_post_terms( $post->ID, 'tipos');
+					 ?> 
+					<h2 class="entry-single"><?php echo $terms[1]->name; ?></h2>
 
-			<div class="direita-single-item">
+					<h2 class="entry-title-single-item"><?php the_title(); ?></h2>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-							<?php global $post;
-								$terms = wp_get_post_terms( $post->ID, 'tipos');
-							 ?> 
-						<h2 class="entry-single"><?php echo $terms[1]->name; ?></h2>
+				</header><!-- .entry-header-single-item -->
 
-						<h2 class="entry-title-single-item"><?php the_title(); ?></h2>
+				<div class="entry-content-single-item">
 
-						<!-- <div class="entry-meta">
-							<?php // aqua_theme_posted_on(); ?>
-						</div> .entry-meta -->
+					<?php the_content(); ?>
 
-					</header><!-- .entry-header -->
+				</div><!-- .entry-content-single-item"-->
 
-					<div class="entry-content-single-item">
-						<?php
-                        	$args = array(
-                                'post_type' => 'attachment',
-                                'numberposts' => -1,
-                                'post_status' => null,
-                                'post_parent' => $post->ID,
-                                );
-                            
-                            $anexos = get_posts ( $args );
-                            
-                            if ( $anexos ) :
-                                foreach ( $anexos as $anexo ) : ?>
-                                
-                                <?php 
-                                    $attachment_id = $anexo->ID;
-                                    $image_attributes = wp_get_attachment_image_src( $attachment_id, 'galeria' );
-                                    $attachment_page = get_attachment_link( $attachment_id ); 
-                                    $description = $anexo->post_content;
-									$url = wp_get_attachment_url( $attachment_id ); 
-								?>
+				<div class="tamanhos">
+					<div class="tamanho">
+						<div class="<?php echo $marcado_pp; ?>">
+						<span>pp</span>
+						</div>
+					</div><!-- .tamanho-pp -->
+					<div class="tamanho">
+						<div class="<?php echo $marcado_p; ?>">
+						<span>p</span>
+						</div>
+					</div><!-- .tamanho-p -->
+					<div class="tamanho">
+						<div class="<?php echo $marcado_m; ?>">
+						<span>m</span>
+						</div>
+					</div><!-- .tamanho-m -->
+					<div class="tamanho">
+						<div class="<?php echo $marcado_g; ?>">
+						<span>g</span>
+						</div>
+					</div><!-- .tamanho-g -->
+				</div><!-- .tamanhos -->
 
-								<div class="each-foto">
-									<a href=""><img src="<?php echo $image_attributes[0]; ?>" alt=""></a>
-								</div><!-- each-foto -->
-								Everaaaaa
+				<div class="loop-fotos">
 
-								<?php endforeach; ?>
+				<?php
+        	$args = array(
+                'post_type' => 'attachment',
+                'numberposts' => -1,
+                'post_status' => null,
+                'post_parent' => $post->ID,
+                );
+            
+            $anexos = get_posts ( $args );
+            
+            if ( $anexos ) :
+            	$c = 1;
+                foreach ( $anexos as $anexo ) : ?>
+                
+                <?php 
+                    $attachment_id = $anexo->ID;
+                    $image_attributes = wp_get_attachment_image_src( $attachment_id, 'galeria' );
+                    $attachment_page = get_attachment_link( $attachment_id ); 
+					$url = wp_get_attachment_url( $attachment_id ); 
+					if ( $c == 1 || $c == 5 ) {
+						$class = "each-foto left";
+					} else {
+						$class = "each-foto";
+					}
+				?>
 
-							<?php endif; ?>
+				<div class="<?php echo $class; ?>">
+					<a href="<?php echo $url; ?>" rel="lightbox"><img src="<?php echo $url; ?>" alt=""></a>
+				</div><!-- each-foto -->
 
-						<?php the_content(); ?>
-						<?php
-							wp_link_pages( array(
-								'before' => '<div class="page-links">' . __( 'Pages:', 'aqua-theme' ),
-								'after'  => '</div>',
-							) );
-						?>
-					</div><!-- .entry-content -->
+				<?php if ( $c == 4 ) { ?>
+					<div class="clear-loop"></div>
+				<?php } ?>
 
-					<div class="tamanhos">
-						<div class="tamanho">
-							<div class="<?php echo $marcado_pp; ?>">
-							<span>pp</span>
-							</div>
-						</div><!-- .tamanho-pp -->
-						<div class="tamanho">
-							<div class="<?php echo $marcado_p; ?>">
-							<span>p</span>
-							</div>
-						</div><!-- .tamanho-p -->
-						<div class="tamanho">
-							<div class="<?php echo $marcado_m; ?>">
-							<span>m</span>
-							</div>
-						</div><!-- .tamanho-m -->
-						<div class="tamanho">
-							<div class="<?php echo $marcado_g; ?>">
-							<span>g</span>
-							</div>
-						</div><!-- .tamanho-g -->
-					</div><!-- .tamanhos -->
+				<?php $c++; ?>
 
-					<?php edit_post_link( __( 'Edit', 'aqua-theme' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php endforeach; ?>
 
-				</article><!-- #post-## -->
+			<?php endif; ?>
 
-				<?php endwhile; // end of the loop. ?>
-			</div><!-- .direita-single-item -->
+			</div><!-- .loop-fotos -->
+
+				<?php edit_post_link( __( 'Edit', 'aqua-theme' ), '<span class="edit-link">', '</span>' ); ?>
+
+			</article><!-- #post-## -->
+
+			<?php endwhile; // end of the loop. ?>
 
 			</div><!-- #main -->
 	</div><!-- #primary-colecao -->
