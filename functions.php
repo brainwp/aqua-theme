@@ -5,6 +5,10 @@
  * @package Aqua Theme
  */
 
+define( 'ACF_LITE' , true );
+require get_stylesheet_directory() . '/inc/advanced-custom-fields/acf.php';
+require get_stylesheet_directory() . '/inc/acf.php';
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -149,7 +153,7 @@ require get_template_directory() . '/inc/jetpack.php';
  * Custom Post Type Itens
  */
 require get_template_directory() . '/inc/custom-itens.php';
-require get_template_directory() . '/inc/metabox-itens.php';
+//require get_template_directory() . '/inc/metabox-itens.php';
 
 // Redirect admins to the dashboard and other users elsewhere
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
@@ -295,7 +299,7 @@ function id_por_slug( $slug ) {
 }
 
 /*require get_template_directory() . '/inc/metabox-contato.php';*/
-require_once (get_stylesheet_directory() . '/inc/metabox-itens.php');
+//require_once (get_stylesheet_directory() . '/inc/metabox-itens.php');
 
 if ( !function_exists( 'wp_print_r' ) ) {
     function wp_print_r( $args, $die = true ) {

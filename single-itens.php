@@ -7,29 +7,8 @@
 			
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php 
-				$pp = get_post_meta(get_the_ID(),'meta_pp');
-				$p = get_post_meta(get_the_ID(),'meta_p');
-				$m = get_post_meta(get_the_ID(),'meta_m');
-				$g = get_post_meta(get_the_ID(),'meta_g');
-
-				if( ! empty( $pp ) ) {
-				  $marcado_pp = "marcado-pp";
-				}
-				if( ! empty( $p ) ) {
-				  $marcado_p = "marcado-p";
-				}
-				if( ! empty( $m ) ) {
-				  $marcado_m = "marcado-m";
-				}
-				if( ! empty( $g ) ) {
-				  $marcado_g = "marcado-g";
-				}
-			?>
-
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="loop-fotos">
-
+				
 				<?php
 	        	$args = array(
 	                'post_type' => 'attachment',
@@ -39,8 +18,12 @@
 	                );
             
             	$anexos = get_posts ( $args );
-            
-		            if ( $anexos ) :
+            	?>
+            	<?php
+		            if ( $anexos ) : ?>
+
+				<div class="loop-fotos">
+	            	<?php
 		            	$c = 1;
 		                foreach ( $anexos as $anexo ) : ?>
 		                
@@ -68,9 +51,9 @@
 
 						<?php endforeach; ?>
 
-					<?php endif; ?>
-
 				</div><!-- .loop-fotos -->
+
+				<?php endif; ?>
 
 				<div class="entry-header-single-item">
 					<?php
@@ -78,37 +61,22 @@
 						$terms = wp_get_post_terms( $post->ID, 'tipos');
 					 ?> 
 					<h2 class="entry-single"><?php echo $terms[1]->name; ?></h2>
+
+					<?php if (get_field('item_referencia')): ?>
+						<span>Referência <?php echo get_field('item_referencia'); ?></span>						
+					<?php endif; ?>
+
 					<h2 class="entry-title-single-item"><?php the_title(); ?></h2>
+
+					<?php if (get_field('item_preco')): ?>
+						<span><?php echo get_field('item_preco'); ?></span>						
+					<?php endif; ?>
+
 				</div><!-- .entry-header-single-item -->
 
 				<div class="entry-content-single-item">
 					<?php the_content(); ?>
 				</div><!-- .entry-content-single-item"-->
-
-				<div class="tamanhos">
-					<div class="tamanho">
-						<div class="<?php echo $marcado_pp; ?>">
-						<span>pp</span>
-						</div>
-					</div><!-- .tamanho-pp -->
-					<div class="tamanho">
-						<div class="<?php echo $marcado_p; ?>">
-						<span>p</span>
-						</div>
-					</div><!-- .tamanho-p -->
-					<div class="tamanho">
-						<div class="<?php echo $marcado_m; ?>">
-						<span>m</span>
-						</div>
-					</div><!-- .tamanho-m -->
-					<div class="tamanho">
-						<div class="<?php echo $marcado_g; ?>">
-						<span>g</span>
-						</div>
-					</div><!-- .tamanho-g -->
-				</div><!-- .tamanhos -->
-
-				
 
 				<?php edit_post_link( __( 'Edit', 'aqua-theme' ), '<span class="edit-link">', '</span>' ); ?>
 

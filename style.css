@@ -845,6 +845,10 @@ a:active {
 	margin-bottom: 25px;
 }
 
+.entry-header-single-item h2 {
+	margin-bottom: 0;
+}
+
 .entry-content-single-item {
 	width: 30%;
 	float: left;	
