@@ -606,10 +606,11 @@ a:active {
 	letter-spacing: 3px;
 	line-height: 2.6em;
 	text-align: center;
+	font-weight: bold;
 }
 
 .widget ul li {
-	font-size: 1em;
+	font-size: 1.1em;
 	list-style: none;
 	text-align: center;
 	list-style: none;
@@ -782,6 +783,10 @@ a:active {
 	text-align: center;
 }
 
+.titulo-taxonomy {
+	display: none;
+}
+
 
 /* =Content
 ----------------------------------------------- */
@@ -847,15 +852,17 @@ a:active {
 }
 
 .tamanhos {
+	display: none;
   	float: right;
     width: auto;		
 }
 
 .loop-fotos {
-	width: 100%;
 	clear: both;
+	float: left;
+	margin: 0 20px 20px;
 	overflow: hidden;
-	margin: 40px 0 20px;
+	width: 50%;
 }
 
 .each-foto {
@@ -863,17 +870,11 @@ a:active {
 	width: 195px;
 	height: auto;
 	margin: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 }
 .each-foto.left {
 	margin-left: 0;
 }
 .each-foto img {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 }
 
 .clear-loop {

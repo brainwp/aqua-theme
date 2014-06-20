@@ -12,7 +12,7 @@
     </div><!-- .item-menu .quem-somos -->
 	</a>
 
-	<a class="a-item-menu" href="<?php echo home_url('/blog/'); ?>">
+	<a class="a-item-menu" href="<?php echo home_url(); ?>">
     <div class="item-menu i-blog">
         <span>blog</span>
     </div><!-- .item-menu .blog -->
