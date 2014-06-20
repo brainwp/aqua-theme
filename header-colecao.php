@@ -1,4 +1,7 @@
 <?php
+if( !is_user_logged_in() ) {
+	wp_redirect( home_url('/entrar') ); exit;
+}
 /**
  * The Header for our theme.
  *

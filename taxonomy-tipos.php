@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header( 'colecao' ); ?>
 
 <?php get_sidebar( 'itens' ); ?>
 

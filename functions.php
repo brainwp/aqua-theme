@@ -160,7 +160,7 @@ function my_login_redirect( $redirect_to, $request, $user ) {
         if ( in_array( 'administrator', $user->roles ) )
             return home_url( '/wp-admin/' );
         else
-            return home_url();
+            return home_url( '/itens/' );
             // return get_permalink( 83 );
     }
 }
@@ -226,7 +226,7 @@ function my_front_end_login_fail($username){
     // if there's a valid referrer, and it's not the default log-in screen
     if(!empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin')){
         // let's append some information (login=failed) to the URL for the theme to use
-        wp_redirect($referrer . '/entrar'); 
+        wp_redirect($referrer . '/itens'); 
     exit;
     }
 }
@@ -251,10 +251,9 @@ function _catch_login_error($redir1, $redir2, $wperr_user)
     return $redir1;
 }
  
-function logout_home($logouturl, $redir)
-{
-$redir = get_option('siteurl') . "/entrar";
-return $logouturl . '&amp;redirect_to=' . urlencode($redir);
+function logout_home($logouturl, $redir) {
+	$redir = get_option('siteurl');
+	return $logouturl . '&amp;redirect_to=' . urlencode($redir);
 }
 
 add_action( 'admin_init', 'redirect_non_admin_users' );
@@ -264,7 +263,7 @@ add_action( 'admin_init', 'redirect_non_admin_users' );
  */
 function redirect_non_admin_users() {
 	if ( ! current_user_can( 'manage_options' ) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
-		wp_redirect( home_url() );
+		wp_redirect( home_url() . '/itens' );
 		exit;
 	}
 }

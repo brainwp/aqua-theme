@@ -27,7 +27,7 @@ get_header(); ?>
 	</label>
 		<div class="submit">
 		<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Entrar" tabindex="100" />
-		<input type="hidden" name="redirect_to" value="<?php echo get_option('home'); ?>/" />
+		<input type="hidden" name="redirect_to" value="<?php echo get_option('home'); ?>/itens" />
 		</div>
 </form>
 			</div><!-- .form-entrar -->
