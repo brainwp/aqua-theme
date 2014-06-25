@@ -29,7 +29,7 @@
 		                
 		                <?php 
 		                    $attachment_id = $anexo->ID;
-		                    $image_attributes = wp_get_attachment_image_src( $attachment_id, 'galeria' );
+		                    $image_attributes = wp_get_attachment_image_src( $attachment_id, 'colecao-thumb' );
 		                    $attachment_page = get_attachment_link( $attachment_id ); 
 							$url = wp_get_attachment_url( $attachment_id ); 
 							if ( $c == 1 || $c == 3 ) {
