@@ -23,7 +23,7 @@
 			<div class="cada-item">
 				<a class="a-cada-item" href="<?php the_permalink(); ?>">
 						<?php if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'colecao-thumb' );
+						the_post_thumbnail( 'colecao' );
 						} else { ?>
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aqua-itens-default.jpg" alt="<?php the_title(); ?>" />
 						<?php } ?>

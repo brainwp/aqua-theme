@@ -767,9 +767,9 @@ a:active {
 /* =Taxonomy Tipo
 ----------------------------------------------- */
 .cada-item {
-	max-width: 150px;
+	max-width: 200px;
 	margin:0 30px 30px 0;
-	height: 260px;
+	height: 300px;
 	overflow: hidden;
 	float: left;
 	position: relative;
@@ -780,8 +780,13 @@ a:active {
 }
 
 .titulo-cada-item {
+	background: #FFF;
 	bottom: 0;
-	text-align: center;
+    display: block;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
 .titulo-taxonomy {

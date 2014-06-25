@@ -57,6 +57,7 @@ function aqua_theme_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'colecao-thumb', 150, 200, false );
+	add_image_size( 'colecao', 300, 400, false );
 	add_image_size( 'colecao-medium', 400 );
 	add_image_size( 'colecao-full', 800 );
 
