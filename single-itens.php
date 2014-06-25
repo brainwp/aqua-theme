@@ -56,17 +56,10 @@
 				<?php endif; ?>
 
 				<div class="entry-header-single-item">
-					<?php
-						global $post;
-						$terms = wp_get_post_terms( $post->ID, 'tipos');
-					 ?> 
-					<h2 class="entry-single"><?php echo $terms[1]->name; ?></h2>
 
 					<?php if (get_field('item_referencia')): ?>
-						<span>Referência <?php echo get_field('item_referencia'); ?></span>						
+						<span>Referência <?php echo get_field('item_referencia'); ?></span><br />				
 					<?php endif; ?>
-
-					<h2 class="entry-title-single-item"><?php the_title(); ?></h2>
 
 					<?php if (get_field('item_preco')): ?>
 						<span><?php echo get_field('item_preco'); ?></span>						
