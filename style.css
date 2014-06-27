@@ -569,7 +569,7 @@ a:active {
 
 #site-navigation {
     clear: both;
-    display: block;
+    display: none;
     float: left;
     margin: 0 auto 6px;
     width: 100%;

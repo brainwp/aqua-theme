@@ -11,7 +11,7 @@
  * @package Aqua Theme
  */
 
-get_header( 'blog' ); ?>
+get_header(); ?>
 
 	<div id="primary-blog" class="content-area">
 
