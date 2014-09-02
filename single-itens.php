@@ -9,30 +9,15 @@
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
-				<?php
-	        	$args = array(
-	                'post_type' => 'attachment',
-	                'numberposts' => -1,
-	                'post_status' => null,
-	                'post_parent' => $post->ID,
-	                );
-            
-            	$anexos = get_posts ( $args );
-            	?>
-            	<?php
-		            if ( $anexos ) : ?>
-
 				<div class="loop-fotos">
 	            	<?php
-		            	$c = 1;
-		                foreach ( $anexos as $anexo ) : ?>
+	            		$c = 0;
+		            	$galeria_images = get_field( 'galeria_imagens_box', $post->ID );
+						$galeria_images = explode(',', $galeria_images);
+		                foreach ( $galeria_images as $galeria_images_id ) : ?>
 		                
 		                <?php 
-		                    $attachment_id = $anexo->ID;
-		                    $image_attributes = wp_get_attachment_image_src( $attachment_id, 'colecao-thumb' );
-		                    $attachment_page = get_attachment_link( $attachment_id ); 
-							$url = wp_get_attachment_url( $attachment_id ); 
-							if ( $c == 1 || $c == 3 ) {
+							if ( $c == 0 || $c == 2 ) {
 								$class = "each-foto left";
 							} else {
 								$class = "each-foto";
@@ -40,11 +25,12 @@
 						?>
 
 						<div class="<?php echo $class; ?>">
-							<a href="<?php echo $url; ?>" rel="lightbox"><img src="<?php echo $url; ?>" alt=""></a>
+							<?php echo wp_get_attachment_image( $galeria_images_id, 'medium' ); ?>
 						</div><!-- each-foto -->
 
-						<?php if ( $c == 2 ) { ?>
+						<?php if ( $c == 1 ) { ?>
 							<div class="clear-loop"></div>
+							<?php $c = 0; ?>
 						<?php } ?>
 
 						<?php $c++; ?>
@@ -52,8 +38,6 @@
 						<?php endforeach; ?>
 
 				</div><!-- .loop-fotos -->
-
-				<?php endif; ?>
 
 				<div class="entry-header-single-item">
 

@@ -5,7 +5,7 @@
  * @package Aqua Theme
  */
 
-define( 'ACF_LITE' , true );
+define( 'ACF_LITE' , false );
 require get_stylesheet_directory() . '/inc/advanced-custom-fields/acf.php';
 require get_stylesheet_directory() . '/inc/acf.php';
 
