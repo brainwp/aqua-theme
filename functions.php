@@ -274,9 +274,9 @@ function redirect_non_admin_users() {
 }
 
 //Adiciona as Minhas Opções
-require_once (get_stylesheet_directory() . '/options/admin_options.php');
+//require_once (get_stylesheet_directory() . '/options/admin_options.php');
 
-add_action('init', 'mo_options'); 
+//add_action('init', 'mo_options'); 
 function mo_options( $option ){
 	echo get_option( $option );
 }
