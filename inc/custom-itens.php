@@ -36,15 +36,15 @@ function create_post_type_itens() {
      */
     register_post_type( 'itens', array(
 	    'labels' => $labels,
+	    'menu_icon' => 'dashicons-products',
 	    'public' => true,
 	    'publicly_queryable' => true,
 	    'show_ui' => true,
 	    'show_in_menu' => true,
-	    /*'has_archive' => 'itens',*/
 	    'query_var' => true,
 		'rewrite' => array(
-		 'slug' => 'itens',
-		 'with_front' => false,
+			'slug' => 'itens',
+			'with_front' => false,
 	    ),
 	    'capability_type' => 'post',
 	    'has_archive' => true,
