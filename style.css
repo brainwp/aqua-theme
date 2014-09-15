@@ -22,7 +22,7 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 
 Fonte do Projeto: font-family: 'Museo Sans', sans-serif;
-
+Fonte do Projeto: font-family: 'Quicksand', sans-serif;;
 */
 
 
@@ -38,7 +38,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: 'Museo Sans', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	color: #3f3f3f;
 	font-style: inherit;
 	font-weight: inherit;
@@ -56,6 +56,10 @@ html {
 body {
 	background: #fff;
 	text-transform: uppercase;
+	line-height: 1;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
 }
 article,
 aside,
@@ -108,8 +112,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 12px;
+	font-size: 1.1em;
 	line-height: 1.5;
 }
 
@@ -133,13 +136,12 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.3em;
 }
 
 /* Text elements */
 p {
-	margin-bottom: 1.5em;
-	font-size: 12px;
+	margin-bottom: 1.3em;
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -547,6 +549,7 @@ a:active {
     color: #222222;
     margin: 0 0 5px;
     text-decoration: none;
+    font-size: 1.35em
 }
 .entry-title a:hover,
 .entry-title a:focus,
@@ -651,14 +654,14 @@ a:active {
 }
 
 .nextpostslink {
-	font-size: 12px;
+	font-size: 1em;
 	background: url(images/seta-dir.png) no-repeat 6px 4px;
 	color: transparent !important;
 	background-size: 40% !important;
 }
 
 .previouspostslink {
-	font-size: 12px;
+	font-size: 1em;
 	background: url(images/seta-esq.png) no-repeat 0 4px;	
 	color: transparent !important;
 }
@@ -672,7 +675,6 @@ a:active {
 .form-entrar h3 {
 	margin: 0 auto;
 	text-align: center;
-	font-size: 12px;
 }
 .form-entrar input[type="password"] {
     border: 1px solid #BAD7DB;
@@ -820,9 +822,13 @@ a:active {
 	margin: 1.5em 0 0;
 }
 
+.entry-content {
+	font-size: 1.25em;
+}
+
 .entry-content-home {
 	text-align: center;
-	font-size: 1em; 
+	font-size: 1.25em; 
 }
 
 .page-links {
@@ -936,7 +942,7 @@ a:active {
 ----------------------------------------------- */
 
 #colophon {
-	min-height: 200px;
+	height: auto;
 }
 
 .site-info {
