@@ -125,6 +125,12 @@ function aqua_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'aqua_theme_scripts' );
 
+function aqua_admin_style() {
+    wp_enqueue_style('aqua-admin-style', get_template_directory_uri() . '/css/style-admin.css');
+}
+add_action('admin_enqueue_scripts', 'aqua_admin_style');
+add_action('login_enqueue_scripts', 'aqua_admin_style');
+
 /**
  * Implement the Custom Header feature.
  */
