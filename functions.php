@@ -131,6 +131,11 @@ function aqua_admin_style() {
 add_action('admin_enqueue_scripts', 'aqua_admin_style');
 add_action('login_enqueue_scripts', 'aqua_admin_style');
 
+function aqua_favicon() {
+	echo "<link rel=\"shortcut icon\" href=\"" . get_stylesheet_directory_uri() . "/images/favicon.png\" />";
+}
+add_action('wp_head', 'aqua_favicon');
+
 /**
  * Implement the Custom Header feature.
  */
