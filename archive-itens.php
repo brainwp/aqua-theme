@@ -9,9 +9,7 @@
 
 			<header class="page-header">
 			<?php
-			$term = $wp_query->queried_object;
-			$id = $term->parent;
-			$array = get_term_by('id', $id, "tipos", 'ARRAY_A'); ?><?php $taxo_pai = $array[name];
+
 			?>
 			<div class="titulo-taxonomy"><h1 class="entry-categoria">Cole&ccedil;&atilde;o</h1></div>
 
@@ -23,7 +21,7 @@
 			<div class="cada-item">
 				<a class="a-cada-item" href="<?php the_permalink(); ?>">
 						<?php if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'colecao' );
+						the_post_thumbnail( 'colecao-thumb' );
 						} else { ?>
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aqua-itens-default.jpg" alt="<?php the_title(); ?>" />
 						<?php } ?>
@@ -33,7 +31,7 @@
 
 			<?php endwhile; ?>
 
-			<?php wp_pagenavi(); ?>
+			<?php //wp_pagenavi(); ?>
 
 		<?php else : ?>
 

@@ -22,7 +22,7 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 
 Fonte do Projeto: font-family: 'Museo Sans', sans-serif;
-Fonte do Projeto: font-family: 'Quicksand', sans-serif;;
+Fonte do Projeto: font-family: 'Quicksand', sans-serif;
 */
 
 
@@ -38,7 +38,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #3f3f3f;
 	font-style: inherit;
 	font-weight: inherit;
@@ -101,7 +101,17 @@ a:active { /* Improves readability when focused and also mouse hovered in all br
 a img {
 	border: 0;
 }
+h1 {
+  font-size: 4em;
+}
 
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+	font-size: 2em;
+}
 
 /* =Global
 ----------------------------------------------- */
@@ -460,9 +470,13 @@ a:active {
 	bottom: 0;
 	margin: 0 auto;
 	text-align: center;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 	color: #fff;
-    font-size: 0.9em;
+    font-size: 1.55em;
+    -webkit-transition: color 250ms ease-out;
+    -moz-transition: color 250ms ease-out;
+    -o-transition: color 250ms ease-out;
+    transition: color 250ms ease-out;
 }
 
 .item-menu:hover span {
@@ -472,11 +486,20 @@ a:active {
 .a-item-menu {
 }
 
-.i-quem-somos  span, .i-blog span, .i-colecao span, .i-contato span {
+.i-colecao span, .i-contato span {
 	left: 6px;
 	width: 100%;
 }
 
+.i-quem-somos span {
+	left: 4px;
+	width: 100%;	
+}
+
+.i-blog span {
+	left: 2px;
+	width: 100%;
+}
 
 .i-quem-somos:hover {
 	background: url("images/bg-menu-hover.png") no-repeat scroll 1px 0px transparent;
@@ -529,6 +552,7 @@ a:active {
 ----------------------------------------------- */
 
 .entry-meta {
+	display:none;
 	color: #666666;
 	clear: both;
     font-size: 11px;
@@ -547,9 +571,8 @@ a:active {
 .entry-title,
 .entry-title a {
     color: #222222;
-    margin: 0 0 5px;
+    margin: 0;
     text-decoration: none;
-    font-size: 1.35em
 }
 .entry-title a:hover,
 .entry-title a:focus,
@@ -580,18 +603,17 @@ a:active {
 	height: 100px;
 }
 
-#site-navigation  li {
+#site-navigation li {
 	float: left;
     position: relative;
 }
 
-#site-navigation  a {
+#site-navigation a {
     display: block;
     line-height: 3.333em;
     padding: 0 1.2125em;
     text-decoration: none;
 	color: #3f3f3f;
-	letter-spacing: 3px;
 	margin-right: 12px;
 }
 
@@ -605,19 +627,15 @@ a:active {
 
 .widget-title {
 	color: #3f3f3f;
-	font-size: 1em;
-	letter-spacing: 3px;
-	line-height: 2.6em;
+	line-height: 1em;
 	text-align: center;
-	font-weight: bold;
+	margin-bottom: 20px;
 }
 
 .widget ul li {
-	font-size: 1.1em;
 	list-style: none;
 	text-align: center;
 	list-style: none;
-	letter-spacing: 3px;
 }
 
 .widget a {
@@ -664,6 +682,10 @@ a:active {
 	font-size: 1em;
 	background: url(images/seta-esq.png) no-repeat 0 4px;	
 	color: transparent !important;
+}
+
+.recentcomments {
+	margin-bottom: 10px;
 }
 
 /* =Form Login
@@ -769,9 +791,9 @@ a:active {
 /* =Taxonomy Tipo
 ----------------------------------------------- */
 .cada-item {
-	max-width: 200px;
-	margin:0 30px 30px 0;
-	height: 300px;
+	max-width: 260px;
+	margin:0 10px 10px 0;
+	height: 360px;
 	overflow: hidden;
 	float: left;
 	position: relative;
@@ -819,16 +841,16 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0.5em 0 0;
 }
 
 .entry-content {
-	font-size: 1.25em;
+	font-size: 1.55em;
 }
 
 .entry-content-home {
 	text-align: center;
-	font-size: 1.25em; 
+	font-size: 1.55em; 
 }
 
 .page-links {
@@ -837,7 +859,7 @@ a:active {
 }
 
 .page-title {   
-    font-size: 1em;
+    font-size: 3em;
     font-weight: bold;
     letter-spacing: 0.1em;
     line-height: 2.6em;
@@ -1034,6 +1056,7 @@ object {
 ----------------------------------------------- */
 
 .site-main [class*="navigation"] {
+	font-size: 1.55em;
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
@@ -1073,6 +1096,10 @@ object {
 /* Search widget */
 .widget_search .search-submit {
 	display: none;
+}
+
+.widget_search .search-field {
+	width: 97%;
 }
 
 

@@ -129,8 +129,7 @@ function aqua_theme_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'colecao-thumb', 150, 200, false );
-	add_image_size( 'colecao', 300, 400, false );
+	add_image_size( 'colecao-thumb', 300, 400, array('center', 'center') );
 	add_image_size( 'colecao-medium', 400 );
 	add_image_size( 'colecao-full', 800 );
 
